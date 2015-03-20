@@ -2,22 +2,22 @@
 layout: default
 ---
 
-<div class="home">
+<aside>
+	<h1>{{ site.title }}</h1>
+	<h2>{{ site.time | date_to_long_string }}</h2>
+	<p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+</aside>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<article>
+	<ul>
+	{% for post in site.posts %}
+		<a href="{{ post.url | prepend: site.baseurl }}">
+			<li>
+				<span class="date">{{ post.date | date: "%-d %B, %Y" }}</span>
+				<span class="spacer">&bull;</span>
+				<span class="title">{{ post.title }}</span>
+			</li>
+		</a>
+	{% endfor %}
+	</ul>
+</article>

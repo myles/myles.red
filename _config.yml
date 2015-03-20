@@ -5,11 +5,14 @@ source: source
 destination: build
 
 assets:
-	cachebust: soft
+  cachebust: soft
 
 # Site settings
 title: Myles.RED
 description: Some random-ass playlists made by Myles Braithwaite.
+permalink: /:year-:month-:day/:title.html
+
+# Author information
 email: me@myles.red
 twitter_username: mylesb
 
