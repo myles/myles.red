@@ -1,2 +1,4 @@
-_site
-.bundle/
+.sass-cache
+/build/
+/.bundle/
+/_vendor/
