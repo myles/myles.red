@@ -1,3 +1,16 @@
+body {
+	background-color: rgb(197, 78, 79);
+	color: $light-gray;
+}
+
+a {
+	color: $dark-gray;
+	
+	&:hover {
+		color: $medium-gray;
+	}
+}
+
 section {
 	@include outer-container;
 	
@@ -21,8 +34,6 @@ section {
 }
 
 aside {
-	color: $dark-gray;
-	
 	h1 {
 		font-size: modular-scale(5);
 		font-family: $georgia;

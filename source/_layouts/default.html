@@ -10,12 +10,17 @@
 		<title>{% if page.title %}{{ page.title }} // {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 		
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+		
 		<link rel="stylesheet" href="{{ site.baseurl }}{% asset_path application.css %}">
+		
+		<link rel="icon" type="image/png" href="{% asset_path favicon.png %}">
 	</head>
 	<body>
+		{% include header.html %}
 		<section>
 			{{ content }}
 		</section>
+		{% include footer.html %}
 		<script type="text/javascript" src="{{ site.baseurl }}{% asset_path application.js %}"></script>
 	</body>
 </html>
