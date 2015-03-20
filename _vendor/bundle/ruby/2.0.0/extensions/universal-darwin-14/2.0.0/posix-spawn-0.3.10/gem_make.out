@@ -1,0 +1,12 @@
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby -r ./siteconf20150320-4318-1c7siir.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling posix-spawn.c
+linking shared-object posix_spawn_ext.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 posix_spawn_ext.bundle ./.gem.20150320-4318-1tgj5hw
+installing default posix_spawn_ext libraries
