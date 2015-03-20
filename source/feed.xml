@@ -24,6 +24,9 @@ layout: null
 				{% for cat in post.categories %}
 				<category>{{ cat | xml_escape }}</category>
 				{% endfor %}
+				{% for track in post.tracks %}
+				<category>{{ track.artist | xml_escape }}</category>
+				{% endfor %}
 			</item>
 		{% endfor %}
 	</channel>
