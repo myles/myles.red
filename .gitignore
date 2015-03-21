@@ -1,4 +1,6 @@
 .sass-cache
 /build/
 /.bundle/
-/_vendor/
+/vendor/
+/node_modules/
+.aws.json

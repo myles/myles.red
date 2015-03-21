@@ -1,0 +1,8 @@
+{
+  "name": "red_myles_www",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt-aws": "^0.4.0",
+    "grunt-jekyll": "^0.4.2"
+  }
+}
