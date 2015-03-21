@@ -42,5 +42,5 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('default', ['jekyll:build']);
 	grunt.registerTask('run', ['jekyll:serve']);
-	grunt.registerTask('deploy', ['jekyll:build', 's3'])
+	grunt.registerTask('deploy', ['default', 's3'])
 };

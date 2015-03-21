@@ -4,6 +4,7 @@
   "devDependencies": {
     "grunt-aws": "^0.4.0",
     "grunt-exec": "^0.4.6",
+    "grunt-favicons": "^0.6.4",
     "grunt-jekyll": "^0.4.2"
   }
 }
