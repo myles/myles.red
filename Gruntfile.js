@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		aws: grunt.file.readJSON('.aws.json'),
+		config: grunt.file.readYAML('_config.yml'),
 		
 		s3: {
 			options: {
@@ -11,6 +12,14 @@ module.exports = function(grunt) {
 			build: {
 				cwd: "build",
 				src: "**"
+			}
+		},
+		exec: {
+			encrypt: {
+				cmd: "gpg --encrypt --armor -r <%= config.gpg_key => --batch --yes --trust-model always -o .aws.json.gpg .aws.json"
+			},
+			decrypt: {
+				cmd: "gpg --decrypt --armor -r <%= config.gpg_key => --batch --yes --trust-model always -o .aws.json .aws.json.gpg"
 			}
 		},
 		jekyll: {
@@ -28,6 +37,7 @@ module.exports = function(grunt) {
 	});
 	
 	grunt.loadNpmTasks('grunt-aws');
+	grunt.loadNpmTasks('grunt-exec');
 	grunt.loadNpmTasks('grunt-jekyll');
 	
 	grunt.registerTask('default', ['jekyll:build']);
