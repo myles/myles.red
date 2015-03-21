@@ -1,2 +1,2 @@
 include = "{$include,.aws.json}"
-exclude = "{$exclude,build,node_modules,vendor,Gemfile.lock}"
+exclude = "{$exclude,build,node_modules,vendor,Gemfile.lock,*.gpg}"
