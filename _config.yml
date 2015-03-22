@@ -8,7 +8,14 @@ source: source
 destination: build
 
 assets:
+  dirname: assets
+  baseurl: /assets/
   cachebust: soft
+  source:
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
 
 # Site settings
 title: Myles.RED

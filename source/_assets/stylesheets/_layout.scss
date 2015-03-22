@@ -15,20 +15,29 @@ section {
 	@include outer-container;
 	
 	aside {
-		@include span-columns(6);
-				
-		@include media(max-width $large-screen) {
-			@include span-columns(12);
-			@include omega();
+		@include span-columns(12);
+		
+		@include omega();
+		
+		@include media(min-width $large-screen) {
+			@include span-columns(5);
+			@include shift(1);
+			
+			position: fixed;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			overflow: auto;
 		}
 	};
 	
 	article {
-		@include span-columns(6);
+		@include span-columns(12);
+		
 		@include omega();
 		
-		@include media(max-width $large-screen) {
-			@include span-columns(12);
+		@include media(min-width $large-screen) {
+			@include span-columns(6);
 		}
 	};
 }
@@ -36,13 +45,25 @@ section {
 aside {
 	h1 {
 		font-size: modular-scale(5);
-		font-family: $georgia;
+		font-family: 'Martel Sans', $georgia;
 		margin: 1em 0 0 0;
 	}
 
 	h2 {
 		font-size: modular-scale(4);
-		font-family: $helvetica;
+		font-family: 'Playfair Display SC', $helvetica;
+	}
+	
+	.pager {
+		display: none;
+	}
+	
+	@include media(max-width $large-screen) {
+		padding: 0 1em;
+		text-align: center;
+		
+		h1 { font-size: modular-scale(3); }
+		h2 { font-size: modular-scale(2); }
 	}
 }
 

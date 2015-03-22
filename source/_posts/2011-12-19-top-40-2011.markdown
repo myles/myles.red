@@ -1,0 +1,46 @@
+---
+layout: playlist
+title: "Top 40 of 2011"
+date: 2011-12-19 12:00:00
+tracks:
+  - { name: "The Answer Was You", artist: "Sloan" }
+  - { name: "Welcome", artist: "Hey Rosetta!" }
+  - { name: "Shoot Out Sparks", artist: "The Swallows" }
+  - { name: "It", artist: "Rich Aucoin" }
+  - { name: "Heaven’s Just for Moviemakers", artist: "Graham Wright" }
+  - { name: "Colours", artist: "Grouplove" }
+  - { name: "Blue Eyes", artist: "Destroyer" }
+  - { name: "To Carry Many Small Things", artist: "Mina Tindle" }
+  - { name: "Let’s Win!", artist: "Alexander" }
+  - { name: "The Stand", artist: "Mother Mother" }
+  - { name: "Soviet Race", artist: "Graham Wright" }
+  - { name: "If Raymond Carver Were Born In the ‘90s", artist: "Library Voices" }
+  - { name: "Jimmie’s Still Jimmie", artist: "Joel Plaskett" }
+  - { name: "Reaction", artist: "Acres Of Lions" }
+  - { name: "Your Daddy Will Do", artist: "Sloan" }
+  - { name: "Rolling In the Deep", artist: "Adele" }
+  - { name: "Video Games", artist: "Lana Del Rey" }
+  - { name: "Mission Bells", artist: "Armistice" }
+  - { name: "The Golden Age", artist: "The Asteroids Galaxy Tour" }
+  - { name: "Nostalgia", artist: "The Burning Hell" }
+  - { name: "Chapel Song", artist: "We Are Augustines" }
+  - { name: "Adieu", artist: "Cœur de pirate" }
+  - { name: "The Cowboys’ Christmas Ball", artist: "The Killers" }
+  - { name: "Green Thumb", artist: "Sunparlour Players" }
+  - { name: "Bad Ritual", artist: "Timber Timbre" }
+  - { name: "What a Little Moonlight Can Do", artist: "Boy and Bean" }
+  - { name: "Comeback Kid (That’s My Dog)", artist: "Brett Dennen" }
+  - { name: "The Prime Minister’s Daughter", artist: "Library Voices" }
+  - { name: "Post-War Blues", artist: "Dan Mangan" }
+  - { name: "Cruel Thing to Do", artist: "Peter Elkas" }
+  - { name: "Pop Goes the World (Men Without Hats)", artist: "The Burning Hell" }
+  - { name: "Owen Sound", artist: "Elliott BROOD" }
+  - { name: "She’s Thunderstorms", artist: "Arctic Monkeys" }
+  - { name: "Book Club", artist: "Arkells" }
+  - { name: "Paradise", artist: "Coldplay" }
+  - { name: "Queen of Hearts", artist: "Fucked Up" }
+  - { name: "Who Are You?", artist: "Kathryn Calder" }
+  - { name: "Healthy Hands (Will Mourn You)", artist: "Tasseomancy" }
+  - { name: "One for You, One for Me", artist: "Bright Eyes" }
+  - { name: "Oh Fortune", artist: "Dan Mangan" }
+---
