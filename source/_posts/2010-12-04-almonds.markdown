@@ -1,0 +1,15 @@
+---
+layout: playlist
+title: "Almonds"
+date: 2010-12-04 12:00:00
+tracks:
+  - { name: "Out Of Time", artist: "The Dutchess & The Duke" }
+  - { name: "I’ll Be Loving You", artist: "The King Khan & BBQ Show" }
+  - { name: "Rivers", artist: "Destroyer" }
+  - { name: "Rococo Zephyr", artist: "Bill Callahan" }
+  - { name: "Gore Veil", artist: "The Deadly Snakes	Porcella" }
+  - { name: "Don't Haunt This Place", artist: "The Rural Alberta Advantage" }
+  - { name: "Tallahassee", artist: "The Mountain Goats" }
+  - { name: "She's The One", artist: "Caribou" }
+  - { name: "Strangers", artist: "The Dutchess & The Duke" }
+---
