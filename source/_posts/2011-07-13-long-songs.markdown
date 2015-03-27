@@ -9,9 +9,9 @@ tracks:
   - { name: 'Road Regrets', artist: 'Dan Mangan' }
   - { name: 'Wolf Like Me', artist: 'TV On the Radio' }
   - { name: 'Spaceman', artist: 'The Killers' }
-  - { name: 'Civil War', artist: 'Guns N' Roses' }
-  - { name: 'You Can't Always Get What You Want', artist: 'The Rolling Stones' }
-  - { name: 'I'll Believe In Anything', artist: 'Wolf Parade' }
+  - { name: 'Civil War', artist: "Guns N' Roses" }
+  - { name: "You Can't Always Get What You Want", artist: 'The Rolling Stones' }
+  - { name: "I'll Believe In Anything", artist: 'Wolf Parade' }
   - { name: 'Forever Young', artist: 'Youth Group' }
   - { name: 'Home', artist: 'Edward Sharpe & The Magnetic Zeros' }
   - { name: 'I Feel Evil Creeping In', artist: 'Islands' }
