@@ -1,0 +1,43 @@
+---
+layout: playlist
+title: "Favorite Songs of 2012"
+date: 2012-12-24 12:00:00
+tracks:
+  - { name: 'Boo Hoo Hoo', artist: 'No Sinner', album: 'Boo Hoo Hoo / Love Is A Madness 7"' }
+  - { name: 'Sun', artist: 'Two Door Cinema Club', album: 'Beacon' }
+  - { name: 'Sun', artist: 'Two Door Cinema Club', album: 'Beacon' }
+  - { name: 'Change', artist: 'Hey Ocean!', album: 'Is' }
+  - { name: 'Queen of Portland Street', artist: 'Matt Mays', album: 'Coyote' }
+  - { name: 'In Came the Flood', artist: 'Wintersleep', album: 'Hello Hum' }
+  - { name: 'Undone', artist: 'Luke LaLonde', album: 'Rhythymnals' }
+  - { name: 'Prairie Girl', artist: 'Rah Rah', album: "The Poet's Dead" }
+  - { name: 'Young & Lazy', artist: 'The Matinee', album: 'Young & Lazy - Single' }
+  - { name: 'Sentimental / Oriental', artist: 'Boxer the Horse', album: 'French Residency' }
+  - { name: 'Somebody That I Used to Know (feat. Kimbra)', artist: 'Gotye', album: 'Making Mirrors' }
+  - { name: 'Do It Anyway', artist: 'Ben Folds Five' }
+  - { name: 'Drive By', artist: 'Train', album: 'California 37' }
+  - { name: 'Art & a Wife', artist: 'Rah Rah', album: 'Art & a Wife - Single' }
+  - { name: 'The House that Heaven Built', artist: 'Japandroids', album: 'Celebration Rock' }
+  - { name: 'Dirty Windshields', artist: 'Leeroy Stagger', album: 'Radiant Land' }
+  - { name: '56K', artist: 'Boys Who Say No', album: 'Contingencies' }
+  - { name: 'Amour Than Amis', artist: 'Two Hours Traffic', album: 'Siren Spell EP - EP' }
+  - { name: 'Shelter from the Storm', artist: 'Ed Roland & The Sweet Tea Project', album: 'Chimes of Freedom - The Songs of Bob Dylan' }
+  - { name: 'On My Mind', artist: 'Jeremy Fisher', album: 'Mint Juleps' }
+  - { name: 'Too Crazy', artist: 'Tia Brazda', album: 'Cabin Fever EP' }
+  - { name: "I Know What Love Isn't", artist: 'Jens Lekman', album: "I Know What Love Isn't" }
+  - { name: 'Cabin Fever', artist: 'Tia Brazda', album: 'Cabin Fever EP' }
+  - { name: 'The Only Place', artist: 'Best Coast', album: 'The Only Place' }
+  - { name: "Rhyme O'Clock (feat. More or Les)", artist: 'Wordburglar', album: '3rdburglar' }
+  - { name: 'Easy Come Easy Go', artist: 'Great Lake Swimmers', album: 'New Wild Everywhere' }
+  - { name: 'Longevity', artist: 'Yeasayer', album: 'Fragrant World' }
+  - { name: 'Grab Me By the Lapel', artist: 'North Lakes', album: 'Grand Prix' }
+  - { name: "Okay Alright I'm Alive", artist: 'Bahamas', album: 'Barchords' }
+  - { name: 'Man In the Long Black Coat', artist: 'Daniel Bedingfield', album: 'Chimes of Freedom - The Songs of Bob Dylan' }
+  - { name: 'I Wanna Rob a Bank', artist: 'Jason Collett', album: 'Reckon' }
+  - { name: 'We Are 1980', artist: 'Said the Whale', album: 'Little Mountain' }
+  - { name: 'Crash Landing', artist: 'Rae Spoon', album: "I Can't Keep All of Our Secrets" }
+  - { name: 'My Girl', artist: 'Yukon Blonde', album: 'Tiger Talk' }
+  - { name: 'Primitive Girl', artist: 'M. Ward', album: 'A Wasteland Companion' }
+  - { name: 'Do It Anyway', artist: 'Ben Folds Five', album: 'The Sound of the Life of the Mind' }
+  - { name: 'We Are Never Ever Getting Back Together', artist: 'Taylor Swift', album: 'Red' }
+---

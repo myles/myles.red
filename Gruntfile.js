@@ -14,6 +14,21 @@ module.exports = function(grunt) {
 				src: "**"
 			}
 		},
+		rsync: {
+			options: {
+				args: ["--verbose"],
+				recursive: true
+			},
+			prod: {
+				options: {
+					src: "./build/",
+					dest: "/srv/www/red_myles_www/html",
+					host: "myles@panda.mylesbraithwaite.com",
+					port: "2222",
+					delete: true,
+				}
+			}
+		},
 		exec: {
 			encrypt: {
 				cmd: "gpg --encrypt --armor -r <%= config.gpg_key => --batch --yes --trust-model always -o .aws.json.gpg .aws.json"
@@ -27,10 +42,15 @@ module.exports = function(grunt) {
 				bundleExec: true,
 				config: '_config.yml'
 			},
-			build: {},
+			build: {
+				options: {
+					build: true
+				}
+			},
 			serve: {
 				options: {
-					serve: true
+					serve: true,
+					auto: true
 				}
 			}
 		}
@@ -38,9 +58,12 @@ module.exports = function(grunt) {
 	
 	grunt.loadNpmTasks('grunt-aws');
 	grunt.loadNpmTasks('grunt-exec');
+	grunt.loadNpmTasks('grunt-rsync');
 	grunt.loadNpmTasks('grunt-jekyll');
 	
-	grunt.registerTask('default', ['jekyll:build']);
 	grunt.registerTask('run', ['jekyll:serve']);
-	grunt.registerTask('deploy', ['default', 's3'])
+	grunt.registerTask('build', ['jekyll:build']);
+	grunt.registerTask('deploy', ['build', 's3', 'rsync:prod']);
+	
+	grunt.registerTask('default', ['build']);
 };
