@@ -2,6 +2,8 @@
 layout: playlist
 title: "End of Summer Songs"
 date: 2011-09-10 12:00:00
+enclosure_mp3: 2011-09-10-end-of-summer-songs.mp3
+enclosure_m4a: 2011-09-10-end-of-summer-songs.m4a
 tracks:
   - { name: 'Please Do Not Go', artist: 'Violent Femmes' }
   - { name: 'Communist Daughter', artist: 'Neutral Milk Hotel' }

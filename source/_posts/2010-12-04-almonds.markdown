@@ -2,6 +2,8 @@
 layout: playlist
 title: "Almonds"
 date: 2010-12-04 12:00:00
+enclosure_mp3: 2010-12-04-almonds.mp3
+enclosure_m4a: 2010-12-04-almonds.m4a
 tracks:
   - { name: "Out Of Time", artist: "The Dutchess & The Duke" }
   - { name: "I’ll Be Loving You", artist: "The King Khan & BBQ Show" }
