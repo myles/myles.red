@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<section>
+<section itemscope itemtype="http://schema.org/MusicPlaylist">
 	<aside>
-		<h1>{{ page.title }}</h1>
+		<h1 itemprop="name">{{ page.title }}</h1>
 		<h2>{{ page.date | date_to_string }}</h2>
 		
 		{% if page.enclosures %}
@@ -40,7 +40,7 @@ layout: default
 		</p>
 	</aside>
 	
-	<article itemscope itemtype="http://schema.org/MusicPlaylist">
+	<article>
 		{% assign count = '0' %}
 		<ul>
 		{% for track in page.tracks %}
