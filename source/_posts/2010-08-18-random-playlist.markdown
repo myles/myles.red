@@ -2,8 +2,9 @@
 layout: playlist
 title: "Random Playlist"
 date: 2010-08-18 12:00:00
-enclosure_mp3: 2010-08-19-random-playlist.mp3
-enclosure_m4a: 2010-08-19-random-playlist.m4a
+enclosures:
+  mp3: 2010-08-19-random-playlist.mp3
+  m4a: 2010-08-19-random-playlist.m4a
 tracks:
   - { name: "Nowhere With You", artist: "Joel Plaskett" }
   - { name: "Oblivion", artist: "Wintersleep" }

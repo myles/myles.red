@@ -2,8 +2,9 @@
 layout: playlist
 title: "Apocalypse"
 date: 2010-12-29 12:00:00
-enclosure_mp3: 2010-12-29-apocalypse.mp3
-enclosure_m4a: 2010-12-29-apocalypse.m4a
+enclosures:
+  mp3: 2010-12-29-apocalypse.mp3
+  m4a: 2010-12-29-apocalypse.m4a
 tracks:
   - { name: 'Volcanoes', artist: 'Islands' }
   - { name: 'No Applause Allowed', artist: 'Hot Hot Heat' }

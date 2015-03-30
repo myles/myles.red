@@ -12,6 +12,11 @@ module.exports = function(grunt) {
 			build: {
 				cwd: "build",
 				src: "**"
+			},
+			podcasts: {
+				cwd: "podcasts",
+				src: "**",
+				dest: "podcasts/"
 			}
 		},
 		rsync: {
@@ -63,7 +68,8 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('run', ['jekyll:serve']);
 	grunt.registerTask('build', ['jekyll:build']);
-	grunt.registerTask('deploy', ['build', 's3', 'rsync:prod']);
+	grunt.registerTask('deploy', ['build', 's3:build', 'rsync:prod']);
+	grunt.registerTask('push_podcasts', ['s3:podcasts'])
 	
 	grunt.registerTask('default', ['build']);
 };

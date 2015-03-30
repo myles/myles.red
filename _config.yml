@@ -29,6 +29,7 @@ twitter_username: mylesb
 # URL settings
 baseurl: ""
 url: "http://myles.red"
+cdn_url: "http://cdn.myles.red"
 
 # Build settings
 markdown: kramdown

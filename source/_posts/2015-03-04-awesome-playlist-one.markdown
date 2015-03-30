@@ -2,6 +2,8 @@
 layout: playlist
 title: "Awesome Playlist I"
 date: 2015-03-04 12:00:00
+external_links:
+  rdio: https://www.rdio.com/people/mylesb/playlists/12938601/Awesome_Playlist_for_4th_March%2C_2015/
 tracks:
   - { name: "You In Your Were", artist: "Kevin Drew", album: "Darlings" }
   - { name: "Gangsta", artist: "tUnE-yArDs", album: "W H O K I L L" }
@@ -14,5 +16,3 @@ tracks:
   - { name: "I Want You Like a Seatbelt", artist: "Chadwick Stokes", album: "The Horse Comanche" }
   - { name: "Burn 2 Ash", artist: "Chad VanGaalen", album: "Skelliconnection" }
 ---
-
-[Rdio Playlist](https://www.rdio.com/people/mylesb/playlists/12938601/Awesome_Playlist_for_4th_March%2C_2015/ "Awesome Playlist for 4th March, 2015")

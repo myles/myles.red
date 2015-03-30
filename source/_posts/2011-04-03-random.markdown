@@ -2,8 +2,9 @@
 layout: playlist
 title: "Random"
 date: 2011-04-03 12:00:00
-enclosure_mp3: 2011-04-03-random.mp3
-enclosure_m4a: 2011-04-03-random.m4a
+enclosures:
+  mp3: 2011-04-03-random.mp3
+  m4a: 2011-04-03-random.m4a
 tracks:
   - { name: 'Vagabound', artist: 'Wolfmother' }
   - { name: 'Use It', artist: 'The New Pornographers' }

@@ -2,12 +2,12 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xml:base="{{ site.url }}" xml:lang="en-US">
 	<channel>
 		<title>{{ site.title | xml_escape }}</title>
 		<description>{{ site.description | xml_escape }}</description>
 		<link>{{ site.url }}{{ site.baseurl }}/</link>
-		<atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+		<atom:link href="{{ "/feed-m4a.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
 		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 		<generator>Jekyll v{{ jekyll.version }}</generator>
@@ -19,9 +19,9 @@ layout: null
 			<itunes:email>me@mylesbraithwaite.com</itunes:email>
 		</itunes:owner>
 		<itunes:explicit>Yes</itunes:explicit>
-		<itunes:image href="{% asset_path favicon.png | prepend: site.baseurl | prepend: site.url %}"/>
+		<itunes:image href="{{ site.baseurl | prepend: site.url }}{% asset_path favicon.png %}"/>
 		{% for post in site.posts limit:10 %}
-		{% if post.enclosure_m4a %}
+		{% if post.enclosures.m4a %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
 				<description>{{ post.content | xml_escape }}</description>
@@ -32,7 +32,7 @@ layout: null
 				<itunes:subtitle>{{ post.content | xml_escape }}</itunes:subtitle>
 				<itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
 				<itunes:duration>00:30:00</itunes:duration>
-				<enclosure url="{{ post.enclosure_m4a }}" length="00" type="audio/mpeg"/>
+				<enclosure url="{{ post.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" length="00" type="audio/mpeg"/>
 				{% for tag in post.tags %}
 				<category>{{ tag | xml_escape }}</category>
 				{% endfor %}
@@ -42,6 +42,7 @@ layout: null
 				{% for track in post.tracks %}
 				<category>{{ track.artist | xml_escape }}</category>
 				{% endfor %}
+				<itunes:category>{{ "Music" | xml_escape }}</itunes:category>
 			</item>
 		{% endif %}
 		{% endfor %}
