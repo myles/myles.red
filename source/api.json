@@ -13,7 +13,11 @@ layout: nil
       "content": {{ post.content | jsonify }},
       "date": {{ post.date | jsonify }},
       "link": {{ post.url | prepend: site.baseurl | prepend: site.url | jsonify }},
-      "tracks": {{ post.tracks | jsonify }}
+      "tracks": {{ post.tracks | jsonify }},
+      "enclosures": {{ post.enclosures | jsonify }},
+      "external_links": {{ post.external_links | jsonify }},
+      "tags": {{ post.tags | jsonify }},
+      "categories": {{ post.categories | jsonify }}
     },
     {% endfor %}
     null
