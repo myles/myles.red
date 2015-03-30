@@ -1,0 +1,21 @@
+---
+layout: nil
+---
+{
+  "title": {{ site.title | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "link": "{{ site.url }}{{ site.baseurl }}/",
+  "last_build_date": {{ site.time | jsonify }},
+  "items": [
+    {% for post in site.posts %}
+    {
+      "title": {{ post.title | jsonify }},
+      "content": {{ post.content | jsonify }},
+      "date": {{ post.date | jsonify }},
+      "link": {{ post.url | prepend: site.baseurl | prepend: site.url | jsonify }},
+      "tracks": {{ post.tracks | jsonify }}
+    },
+    {% endfor %}
+    null
+  ]
+}
