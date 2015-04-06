@@ -10,7 +10,7 @@ destination: build
 assets:
   dirname: assets
   baseurl: /assets/
-  cachebust: soft
+  cachebust: hard
   source:
     - _assets/fonts
     - _assets/images

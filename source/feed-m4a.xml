@@ -19,7 +19,8 @@ layout: null
 			<itunes:email>me@mylesbraithwaite.com</itunes:email>
 		</itunes:owner>
 		<itunes:explicit>Yes</itunes:explicit>
-		<itunes:image href="{{ site.baseurl | prepend: site.url }}{% asset_path favicon.png %}"/>
+		<itunes:image href="{{ site.baseurl | prepend: site.cdn_url }}{% asset_path favicon.png %}"/>
+		<itunes:category text="{{ 'Music' | xml_escape }}"/>
 		{% for post in site.posts limit:10 %}
 		{% if post.enclosures.m4a %}
 			<item>
@@ -42,7 +43,6 @@ layout: null
 				{% for track in post.tracks %}
 				<category>{{ track.artist | xml_escape }}</category>
 				{% endfor %}
-				<itunes:category>{{ "Music" | xml_escape }}</itunes:category>
 			</item>
 		{% endif %}
 		{% endfor %}
