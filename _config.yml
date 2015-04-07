@@ -23,6 +23,7 @@ description: Some random-ass playlists made by Myles Braithwaite.
 permalink: /:year-:month-:day/:title.html
 
 # Author information
+author: Myles Braithwaite
 email: me@myles.red
 twitter_username: mylesb
 

@@ -2,7 +2,7 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xml:base="{{ site.url }}" xml:lang="en-US">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xml:base="http://myles.red" xml:lang="en-US">
 	<channel>
 		<title>{{ site.title | xml_escape }}</title>
 		<description>{{ site.description | xml_escape }}</description>
@@ -11,12 +11,12 @@ layout: null
 		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 		<generator>Jekyll v{{ jekyll.version }}</generator>
-		<itunes:author>Myles Braithwaite</itunes:author>
+		<itunes:author>{{ site.author | xml_escape }}</itunes:author>
 		<itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
 		<itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
 		<itunes:owner>
-			<itunes:name>Myles Braithwaite</itunes:name>
-			<itunes:email>me@mylesbraithwaite.com</itunes:email>
+			<itunes:name>{{ site.author | xml_escape }}</itunes:name>
+			<itunes:email>{{ site.email | xml_escape }}</itunes:email>
 		</itunes:owner>
 		<itunes:explicit>Yes</itunes:explicit>
 		<itunes:image href="{{ site.baseurl | prepend: site.cdn_url }}{% asset_path favicon.png %}"/>
@@ -29,7 +29,7 @@ layout: null
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 				<link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
 				<guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-				<itunes:author>Myles Braithwaite</itunes:author>
+				<itunes:author>{{ site.author | xml_escape }}</itunes:author>
 				<itunes:subtitle>{{ post.content | xml_escape }}</itunes:subtitle>
 				<itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
 				<itunes:duration>00:30:00</itunes:duration>
