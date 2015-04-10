@@ -3,22 +3,28 @@ layout: default
 ---
 
 <section>
+	<header>
+		<div class="next">
+			{% for post in site.posts %}{% if forloop.last %}
+			<a href="{{ post.url }}" class="next">Next</a>
+			{% endif %}{% endfor %}
+		</div>
+	
+		<div class="home">
+			<a href="{{ "/" | site.base.url }}" class="home">Home</a>
+		</div>
+	
+		<div class="previous">
+			{% for post in site.posts %}{% if forloop.first %}
+			<a href="{{ post.url }}" class="previous">Previous</a>
+			{% endif %}{% endfor %}
+		</div>
+	</header>
+	
 	<aside>
 		<h1>{{ site.title | improve }}</h1>
 		<h2>{{ site.time | date_to_long_string | improve }}</h2>
 		<p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">{{ "via RSS" | improve }}</a>.</p>
-		
-		<p class="pager">
-			{% for post in site.posts %}{% if forloop.last %}
-			<a href="{{ post.url }}" class="next">Next</a>
-			{% endif %}{% endfor %}
-			
-			<a href="{{ "/" | site.base.url }}" class="home">Home</a>
-			
-			{% for post in site.posts %}{% if forloop.first %}
-			<a href="{{ post.url }}" class="previous">Previous</a>
-			{% endif %}{% endfor %}
-		</p>
 	</aside>
 
 	<article>

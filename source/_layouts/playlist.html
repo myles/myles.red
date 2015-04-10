@@ -3,6 +3,28 @@ layout: default
 ---
 
 <section itemscope itemtype="http://schema.org/MusicPlaylist">
+	<header>
+		<div class="next">
+			{% if page.next %}
+			<a href="{{ page.next.url }}" class="next">Next</a>
+			{% else %}
+			<a href="{{ "/" | site.base.url }}" class="next">Next</a>
+			{% endif %}
+		</div>
+	
+		<div class="home">
+			<a href="{{ "/" | site.base.url }}" class="home">Home</a>
+		</div>
+	
+		<div class="previous">
+			{% if page.previous %}
+			<a href="{{ page.previous.url }}" class="previous">Previous</a>
+			{% else %}
+			<a href="{{ "/" | site.base.url }}" class="previous">Previous</a>
+			{% endif %}
+		</div>
+	</header>
+	
 	<aside>
 		<h1 itemprop="name">{{ page.title | improve }}</h1>
 		<h2>{{ page.date | date_to_string | improve }}</h2>
@@ -24,20 +46,6 @@ layout: default
 		{% endif %}
 		
 		{{ content }}
-		
-		<p class="pager">
-			{% if page.next %}
-			<a href="{{ page.next.url }}" class="next">Next</a>
-			{% else %}
-			<a href="{{ "/" | site.base.url }}" class="next">Next</a>
-			{% endif %}
-			<a href="{{ "/" | site.base.url }}" class="home">Home</a>
-			{% if page.previous %}
-			<a href="{{ page.previous.url }}" class="previous">Previous</a>
-			{% else %}
-			<a href="{{ "/" | site.base.url }}" class="previous">Previous</a>
-			{% endif %}
-		</p>
 	</aside>
 	
 	<article>

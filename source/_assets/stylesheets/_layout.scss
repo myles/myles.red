@@ -14,19 +14,26 @@ a {
 section {
 	@include outer-container;
 	
+  header {
+    @include outer-container;
+    @include margin(null null null null);
+    @include position(fixed, 0 0 null 0);
+    
+    div {
+      @include span-columns(4);
+    }
+  }
+  
 	aside {
 		@include span-columns(12);
 		
 		@include omega();
 		
 		@include media(min-width $large-screen) {
+      @include position(fixed, 0 0 0 null);
 			@include span-columns(5);
 			@include shift(1);
-			
-			position: fixed;
-			right: 0;
-			top: 0;
-			bottom: 0;
+      
 			overflow: auto;
 		}
 	};
@@ -42,22 +49,42 @@ section {
 	};
 }
 
+header {
+  font-family: $monospace;
+	background-color: $dark-gray;
+  border-bottom: 1px solid $light-gray;
+  
+  a {
+    color: $light-gray;
+  }
+  
+  div {
+    &.next {
+      text-align: left;
+    }
+  
+    &.home {
+      text-align: center;
+    }
+  
+    &.previous {
+      text-align: right;
+    }
+  }
+}
+
 aside {
 	h1 {
 		font-size: modular-scale(5);
-		font-family: 'Martel Sans', $georgia;
+		font-family: 'Playfair Display SC', $georgia;
 		margin: 1em 0 0 0;
 	}
 
 	h2 {
 		font-size: modular-scale(4);
-		font-family: 'Playfair Display SC', $helvetica;
+		font-family: 'Martel Sans', $helvetica;
 	}
-	
-	.pager {
-	  @include position(fixed, null null 0 null);
-	}
-	
+  
 	@include media(max-width $large-screen) {
 		padding: 0 1em;
 		text-align: center;

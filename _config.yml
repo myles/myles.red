@@ -10,12 +10,13 @@ destination: build
 assets:
   dirname: assets
   baseurl: /assets/
-  cachebust: hard
+  cachebust: soft
   source:
     - _assets/fonts
     - _assets/images
     - _assets/javascripts
     - _assets/stylesheets
+  debug: true
 
 # Site settings
 title: Myles.RED
