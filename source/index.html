@@ -6,7 +6,19 @@ layout: default
 	<aside>
 		<h1>{{ site.title | improve }}</h1>
 		<h2>{{ site.time | date_to_long_string | improve }}</h2>
-		<p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">{{ "via RSS" | improve }}</a></p>
+		<p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">{{ "via RSS" | improve }}</a>.</p>
+		
+		<p class="pager">
+			{% for post in site.posts %}{% if forloop.last %}
+			<a href="{{ post.url }}" class="next">Next</a>
+			{% endif %}{% endfor %}
+			
+			<a href="{{ "/" | site.base.url }}" class="home">Home</a>
+			
+			{% for post in site.posts %}{% if forloop.first %}
+			<a href="{{ post.url }}" class="previous">Previous</a>
+			{% endif %}{% endfor %}
+		</p>
 	</aside>
 
 	<article>
@@ -14,9 +26,15 @@ layout: default
 		{% for post in site.posts %}
 			<a href="{{ post.url | prepend: site.baseurl }}">
 				<li>
-					<span class="date">{{ post.date | date: "%-d %B, %Y" | improve }}</span>
+					<span class="date">
+						{{ post.date | date: "%-d %B, %Y" | improve }}
+					</span>
+					
 					<span class="spacer">&bull;</span>
-					<span class="title">{{ post.title | improve }}</span>
+					
+					<span class="title">
+						{{ post.title | improve }}
+					</span>
 				</li>
 			</a>
 		{% endfor %}

@@ -4,8 +4,8 @@ layout: default
 
 <section itemscope itemtype="http://schema.org/MusicPlaylist">
 	<aside>
-		<h1 itemprop="name">{{ page.title | widont }}</h1>
-		<h2>{{ page.date | date_to_string }}</h2>
+		<h1 itemprop="name">{{ page.title | improve }}</h1>
+		<h2>{{ page.date | date_to_string | improve }}</h2>
 		
 		{% if page.enclosures %}
 		<audio controls>
@@ -27,15 +27,15 @@ layout: default
 		
 		<p class="pager">
 			{% if page.next %}
-			<a href="{{ page.next.url }}" class="active">Next</a>
+			<a href="{{ page.next.url }}" class="next">Next</a>
 			{% else %}
-			<a href="javascript:void(0)" class="inactive">Next</a>
+			<a href="{{ "/" | site.base.url }}" class="next">Next</a>
 			{% endif %}
 			<a href="{{ "/" | site.base.url }}" class="home">Home</a>
 			{% if page.previous %}
-			<a href="{{ page.previous.url }}" class="active">Previous</a>
+			<a href="{{ page.previous.url }}" class="previous">Previous</a>
 			{% else %}
-			<a href="javascript:void(0)" class="inactive">Previous</a>
+			<a href="{{ "/" | site.base.url }}" class="previous">Previous</a>
 			{% endif %}
 		</p>
 	</aside>

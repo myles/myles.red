@@ -55,7 +55,7 @@ aside {
 	}
 	
 	.pager {
-		display: none;
+	  @include position(fixed, null null 0 null);
 	}
 	
 	@include media(max-width $large-screen) {
