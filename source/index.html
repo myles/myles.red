@@ -4,9 +4,9 @@ layout: default
 
 <section>
 	<aside>
-		<h1>{{ site.title }}</h1>
-		<h2>{{ site.time | date_to_long_string }}</h2>
-		<p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+		<h1>{{ site.title | improve }}</h1>
+		<h2>{{ site.time | date_to_long_string | improve }}</h2>
+		<p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">{{ "via RSS" | improve }}</a></p>
 	</aside>
 
 	<article>
@@ -14,9 +14,9 @@ layout: default
 		{% for post in site.posts %}
 			<a href="{{ post.url | prepend: site.baseurl }}">
 				<li>
-					<span class="date">{{ post.date | date: "%-d %B, %Y" }}</span>
+					<span class="date">{{ post.date | date: "%-d %B, %Y" | improve }}</span>
 					<span class="spacer">&bull;</span>
-					<span class="title">{{ post.title }}</span>
+					<span class="title">{{ post.title | improve }}</span>
 				</li>
 			</a>
 		{% endfor %}
