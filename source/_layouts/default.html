@@ -20,11 +20,13 @@
 		<link rel="apple-touch-icon" type="image/png"href="{% asset_path favicon.png %}">
 		
 		<meta property="og:site_name" content="{{ site.title }}">
-		{% if post.url %}
-		<meta property="og:title" content="{{ post.title }}">
+		{% if page.tracks %}
+		<meta property="og:title" content="{{ page.title }}">
 		<meta property="og:type" content="music.playlist">
+		{% if page.enclosures.mp3 %}
 		<meta property="og:audio" content="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}">
 		<meta property="og:audio:type" content="audio/mpeg">
+		{% endif %}
 		{% else %}
 		<meta property="og:title" content="{{ site.title }}">
 		<meta property="og:description" content="{{ site.description }}">
