@@ -20,6 +20,9 @@
 		<link rel="apple-touch-icon" type="image/png"href="{% asset_path favicon.png %}">
 		
 		<meta property="og:site_name" content="{{ site.title }}">
+		<meta property="og:image" content="{% asset_path favicon.png %}">
+		<meta property="og:description" content="{{ site.description }}">
+		<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}?utm_source=facebook&utm_medium=facebook&utm_campaign=facebook">
 		{% if page.tracks %}
 		<meta property="og:title" content="{{ page.title }}">
 		<meta property="og:type" content="music.playlist">
@@ -29,7 +32,6 @@
 		{% endif %}
 		{% else %}
 		<meta property="og:title" content="{{ site.title }}">
-		<meta property="og:description" content="{{ site.description }}">
 		<meta property="og:type" content="website">
 		{% endif %}
 		
