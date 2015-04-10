@@ -14,7 +14,7 @@ a {
 section {
 	@include outer-container;
 	
-  header {
+  nav {
     @include outer-container;
     @include margin(null null null null);
     @include position(fixed, 0 0 null 0);

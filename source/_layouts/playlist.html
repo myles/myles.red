@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section itemscope itemtype="http://schema.org/MusicPlaylist">
-	<header>
+	<nav>
 		<div class="next">
 			{% if page.next %}
 			<a href="{{ page.next.url }}" title="{{ page.next.title }}">Next</a>
@@ -23,7 +23,7 @@ layout: default
 			<a href="{{ "/" | site.base.url }}" title="Home">Previous</a>
 			{% endif %}
 		</div>
-	</header>
+	</nav>
 	
 	<aside>
 		<h1 itemprop="name">{{ page.title | improve }}</h1>

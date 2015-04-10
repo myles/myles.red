@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section>
-	<header>
+	<nav>
 		<div class="next">
 			{% for post in site.posts %}{% if forloop.last %}
 			<a href="{{ post.url }}" title="{{ post.title }}">Next</a>
@@ -19,7 +19,7 @@ layout: default
 			<a href="{{ post.url }}" title="{{ post.title }}">Previous</a>
 			{% endif %}{% endfor %}
 		</div>
-	</header>
+	</nav>
 	
 	<aside>
 		<h1>{{ site.title | improve }}</h1>
