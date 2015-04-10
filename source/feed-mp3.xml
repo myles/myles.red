@@ -6,7 +6,7 @@ layout: null
 	<channel>
 		<title>{{ site.title | xml_escape }}</title>
 		<description>{{ site.description | xml_escape }}</description>
-		<link>{{ site.url }}{{ site.baseurl }}/{{ "?utm_source=feed.xml&utm_medium=feed&utm_campaign=feed" | xml_escape }}</link>
+		<link>{{ site.url }}{{ site.baseurl }}/{{ "?utm_source=feed-mp3.xml&utm_medium=feed&utm_campaign=feed" | xml_escape }}</link>
 		<atom:link href="{{ "/feed-mp3.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
 		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
@@ -26,8 +26,8 @@ layout: null
 				<title>{{ post.title | xml_escape }}</title>
 				<description>{% capture content %}{% include post.html post=post %}{% endcapture %}{{ content | xml_escape }}</description>
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<link>{{ post.url | prepend: site.baseurl | prepend: site.url }}{{ "?utm_source=feed.xml&utm_medium=feed&utm_campaign=feed" | xml_escape }}</link>
-				<guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}{{ "?utm_source=feed.xml&utm_medium=feed&utm_campaign=feed" | xml_escape }}</guid>
+				<link>{{ post.url | prepend: site.baseurl | prepend: site.url }}{{ "?utm_source=feed-mp3.xml&utm_medium=feed&utm_campaign=feed" | xml_escape }}</link>
+				<guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}{{ "?utm_source=feed-mp3.xml&utm_medium=feed&utm_campaign=feed" | xml_escape }}</guid>
 				<itunes:author>{{ site.author | xml_escape }}</itunes:author>
 				<itunes:subtitle>{{ post.content | xml_escape }}</itunes:subtitle>
 				<itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
