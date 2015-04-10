@@ -20,7 +20,7 @@
 		<link rel="apple-touch-icon" type="image/png"href="{% asset_path favicon.png %}">
 		
 		<meta property="og:site_name" content="{{ site.title }}">
-		<meta property="og:image" content="{% asset_path favicon.png %}">
+		<meta property="og:image" content="{{ site.cdn_url }}{% asset_path favicon.png %}">
 		<meta property="og:description" content="{{ site.description }}">
 		<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}?utm_source=facebook&utm_medium=facebook&utm_campaign=facebook">
 		{% if page.tracks %}
