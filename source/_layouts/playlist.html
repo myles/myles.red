@@ -52,8 +52,8 @@ layout: default
 		{% assign count = '0' %}
 		<ul>
 		{% for track in page.tracks %}
-			<li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
-				{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+			{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+			<li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording" id="{{ count }}">
 				<span class="count">
 					{% if count.size > 1 %}
 						{{ count }}

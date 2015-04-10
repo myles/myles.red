@@ -38,10 +38,11 @@ class GoogleAnalytics
 $ ->
 	GoogleAnalytics.init 'UA-1642439-34'
 	
-	$("h1").fitText(0.9)
-	$("h2").fitText(1.2)
+	$("h1").fitText(0.6)
+	$("h2").fitText(0.7)
 	
-	$("li.track").on "click", ->
-		GoogleAnalytics.trackPageView '/track/'
+	$('li[itemprop="track"]').on "click", ->
+	  GoogleAnalytics.trackPageView "#{ window.location.pathname }#track-#{ this.id }"
+    return
 	
 	true
