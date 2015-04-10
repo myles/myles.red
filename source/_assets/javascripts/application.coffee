@@ -43,6 +43,5 @@ $ ->
 	
 	$('li[itemprop="track"]').on "click", ->
 	  GoogleAnalytics.trackPageView "#{ window.location.pathname }#track-#{ this.id }"
-    return
 	
 	true
