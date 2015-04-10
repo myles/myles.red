@@ -35,6 +35,20 @@
 		<meta property="og:type" content="website">
 		{% endif %}
 		
+		
+		<meta name="twitter:site" content="@MylesRed">
+		<meta name="twitter:creator" content="@MylesB">
+		<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}?utm_source=twitter&utm_medium=twitter&utm_campaign=twitter">
+		{% if page.tracks %}
+		<meta name="twitter:card" content="summary">
+		<meta property="og:title" content="{{ page.title }}">
+		{% else %}
+		<meta name="twitter:card" content="summary">
+		<meta property="og:title" content="{{ site.title }}">
+		<meta property="og:description" content="{{ site.description }}">
+		<meta property="og:image" content="{{ site.cdn_url }}{% asset_path favicon.png %}">
+		{% endif %}
+		
 		<meta name="application-name" content="{{ site.title }}">
 		<meta name="msapplication-TileColor" content="#c54e4f">
 		<meta name="msapplication-square70x70logo" content="{% asset_path favicon.png %}">
