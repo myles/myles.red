@@ -6,17 +6,17 @@ layout: default
 	<header>
 		<div class="next">
 			{% for post in site.posts %}{% if forloop.last %}
-			<a href="{{ post.url }}" class="next">Next</a>
+			<a href="{{ post.url }}" title="{{ post.title }}">Next</a>
 			{% endif %}{% endfor %}
 		</div>
 	
 		<div class="home">
-			<a href="{{ "/" | site.base.url }}" class="home">Home</a>
+			<a href="{{ "/" | site.base.url }}" title="Home">Home</a>
 		</div>
 	
 		<div class="previous">
 			{% for post in site.posts %}{% if forloop.first %}
-			<a href="{{ post.url }}" class="previous">Previous</a>
+			<a href="{{ post.url }}" title="{{ post.title }}">Previous</a>
 			{% endif %}{% endfor %}
 		</div>
 	</header>

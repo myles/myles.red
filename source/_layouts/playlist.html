@@ -6,21 +6,21 @@ layout: default
 	<header>
 		<div class="next">
 			{% if page.next %}
-			<a href="{{ page.next.url }}" class="next">Next</a>
+			<a href="{{ page.next.url }}" title="{{ page.next.title }}">Next</a>
 			{% else %}
-			<a href="{{ "/" | site.base.url }}" class="next">Next</a>
+			<a href="{{ "/" | site.base.url }}" title="Home">Next</a>
 			{% endif %}
 		</div>
 	
 		<div class="home">
-			<a href="{{ "/" | site.base.url }}" class="home">Home</a>
+			<a href="{{ "/" | site.base.url }}" title="Home">Home</a>
 		</div>
 	
 		<div class="previous">
 			{% if page.previous %}
-			<a href="{{ page.previous.url }}" class="previous">Previous</a>
+			<a href="{{ page.previous.url }}" title="{{ page.previous.title }}">Previous</a>
 			{% else %}
-			<a href="{{ "/" | site.base.url }}" class="previous">Previous</a>
+			<a href="{{ "/" | site.base.url }}" title="Home">Previous</a>
 			{% endif %}
 		</div>
 	</header>
