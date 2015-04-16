@@ -113,7 +113,7 @@ article {
 		
 		border-bottom: 1px solid $light-gray;
 		
-		&:hover {
+		&:hover, &:target {
 			color: $dark-gray;
 			background-color: $medium-gray;
 		}
