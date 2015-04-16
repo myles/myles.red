@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section itemscope itemtype="http://schema.org/MusicPlaylist">
+<section itemscope itemtype="http://schema.org/Article">
 	<nav>
 		<div class="next">
 			{% if page.next %}
@@ -27,7 +27,7 @@ layout: default
 	
 	<aside>
 		<h1 itemprop="name">{{ page.title | improve }}</h1>
-		<h2>{{ page.date | date_to_string | improve }}</h2>
+		<h2  itemprop="datePublished">{{ page.date | date_to_string | improve }}</h2>
 		
 		{% if page.enclosures %}
 		<audio controls>
@@ -60,7 +60,7 @@ layout: default
 		{{ content }}
 	</aside>
 	
-	<article>
+	<article itemscope itemtype="http://schema.org/MusicPlaylist">
 		{% assign count = '0' %}
 		<ul>
 		{% for track in page.tracks %}
