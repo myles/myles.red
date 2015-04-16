@@ -42,6 +42,6 @@ $ ->
 	$("h2").fitText()
 	
 	$('li[itemprop="track"]').on "click", ->
-	  GoogleAnalytics.trackPageView "#{ window.location.pathname }#track-#{ this.id }"
+	  GoogleAnalytics.trackPageView "#{ window.location.pathname }##{ this.id }"
 	
 	true

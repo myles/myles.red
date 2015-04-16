@@ -65,8 +65,8 @@ layout: default
 		<ul>
 		{% for track in page.tracks %}
 			{% capture count %}{{ count | plus: '1' }}{% endcapture %}
-			<li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording" id="track-{{ count }}">
-				<a name="track-{{ count }}">
+			<li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording" id="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}">
+				<a name="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}">
 				<span class="count">
 					{% if count.size > 1 %}
 						{{ count }}
