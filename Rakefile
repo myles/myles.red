@@ -1,5 +1,5 @@
 namespace :assets do
   task :precompile do
-    sh 'grunt build'
+    sh 'bundle exec jekyll build --config _config.yml'
   end
 end
