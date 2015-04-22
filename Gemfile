@@ -7,6 +7,10 @@ gem 'jekyll-typogrify'
 
 gem 'bourbon'
 gem 'neat'
+
 gem 'sass'
 gem 'uglifier'
 gem 'coffee-script'
+
+gem 'puma'
+gem 'rack-contrib'
