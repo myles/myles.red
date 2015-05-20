@@ -1,14 +1,22 @@
 aside {
 	h1 {
 		font-size: modular-scale(5);
-		font-family: 'Playfair Display SC', $georgia;
+		font-family: $serif-font-family;
 		margin: 1em 0 0 0;
 	}
 
 	h2 {
 		font-size: modular-scale(4);
-		font-family: 'Martel Sans', $helvetica;
+		font-family: $sans-serif-font-family;
 	}
+  
+  a {
+    color: $dark-gray;
+    
+    &:hover {
+      color: $medium-gray;
+    }
+  }
   
 	@include media(max-width $large-screen) {
 		padding: 0 1em;

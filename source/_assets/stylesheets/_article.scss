@@ -1,0 +1,31 @@
+article {
+	font-size: modular-scale(1);
+	font-family: $monospace-font-family;
+	color: $light-gray;
+	background-color: $dark-gray;
+	height: 100%;
+	
+	ol {
+		list-style-position: inside;
+		list-style-type: decimal-leading-zero;
+	}
+	
+	li {
+		@include padding(3em 1em);
+		
+		border-bottom: 1px solid $light-gray;
+    
+    a {
+      color: $light-gray;
+      
+      &:hover, &:target {
+        color: $light-gray;
+      }
+    }
+		
+		&:hover, &:target {
+			color: $dark-gray;
+			background-color: $medium-gray;
+		}
+	}
+}

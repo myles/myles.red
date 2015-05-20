@@ -30,8 +30,8 @@ layout: default
 	<article>
 		<ul>
 		{% for post in site.posts %}
-			<a href="{{ post.url | prepend: site.baseurl }}">
-				<li>
+			<li>
+				<a href="{{ post.url | prepend: site.baseurl }}">
 					<span class="date">
 						{{ post.date | date: "%-d %B, %Y" | improve }}
 					</span>
@@ -41,8 +41,8 @@ layout: default
 					<span class="title">
 						{{ post.title | improve }}
 					</span>
-				</li>
-			</a>
+				</a>
+			</li>
 		{% endfor %}
 		</ul>
 	</article>

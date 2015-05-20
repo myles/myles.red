@@ -1,16 +1,4 @@
-$max-width: 100% !global;
-
-$primary-colour: rgb(197, 78, 79);
-
 body {
 	background-color: $primary-colour;
 	color: $light-gray;
-}
-
-a {
-	color: $dark-gray;
-	
-	&:hover {
-		color: $medium-gray;
-	}
 }
