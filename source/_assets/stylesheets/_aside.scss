@@ -1,0 +1,20 @@
+aside {
+	h1 {
+		font-size: modular-scale(5);
+		font-family: 'Playfair Display SC', $georgia;
+		margin: 1em 0 0 0;
+	}
+
+	h2 {
+		font-size: modular-scale(4);
+		font-family: 'Martel Sans', $helvetica;
+	}
+  
+	@include media(max-width $large-screen) {
+		padding: 0 1em;
+		text-align: center;
+		
+		h1 { font-size: modular-scale(3); }
+		h2 { font-size: modular-scale(2); }
+	}
+}
