@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<section>
+	<nav>
+		<div class="next">
+			{% for post in site.posts %}{% if forloop.last %}
+			<a href="{{ post.url }}" title="{{ post.title }}">Next</a>
+			{% endif %}{% endfor %}
+		</div>
+	
+		<div class="home">
+			<a href="{{ "/" | site.base.url }}" title="Home">Home</a>
+		</div>
+	
+		<div class="previous">
+			{% for post in site.posts %}{% if forloop.first %}
+			<a href="{{ post.url }}" title="{{ post.title }}">Previous</a>
+			{% endif %}{% endfor %}
+		</div>
+	</nav>
+	
+	<aside>
+		<h1>HTTP 404</h1>
+		<h2>Not Found</h2>
+		<p>I'm sorry but the file your requested doesn't exist. Try one of the links over there on the left.</p>
+	</aside>
+
+	<article>
+		<ul>
+		{% for post in site.posts %}
+			<li>
+				<a href="{{ post.url | prepend: site.baseurl }}">
+					<span class="date">
+						{{ post.date | date: "%-d %B, %Y" | improve }}
+					</span>
+					
+					<span class="spacer">&bull;</span>
+					
+					<span class="title">
+						{{ post.title | improve }}
+					</span>
+				</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</article>
+</section>
