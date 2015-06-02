@@ -1,1 +1,18 @@
-<h2>Track List</h2><ul>{% for track in include.post.tracks %}<li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"><span class="track"><span class="name" itemprop="name">{{ track.name }}</span><span class="spacer">&nbsp;&bull;&nbsp;</span><span class="artist" itemprop="byArtist">{{ track.artist }}</span>{% if track.album %}<meta content="{{ track.album }}" itemprop="inAlbum">{% endif %}</span></li>{% endfor %}</ul>
+<h2>Track List</h2>
+
+<ul>
+    {% for track in include.post.tracks %}
+    <li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+        <span class="track">
+            <span class="name" itemprop="name">
+                {{ track.name }}
+            </span>
+            <span class="spacer">&bull;</span>
+            <span class="artist" itemprop="byArtist">
+                {{ track.artist }}
+            </span>
+            {% if track.album %}<meta content="{{ track.album }}" itemprop="inAlbum">{% endif %}
+        </span>
+    </li>
+    {% endfor %}
+</ul>
