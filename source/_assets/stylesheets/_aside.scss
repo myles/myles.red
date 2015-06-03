@@ -12,14 +12,14 @@ aside {
 		font-family: $sans-serif-font-family;
 	}
   
-  a {
-    color: $dark-gray;
-    
-    &:hover {
-      color: $medium-gray;
+    a {
+        color: $dark-gray;
+        
+        &:hover {
+          color: $medium-gray;
+        }
     }
-  }
-  
+    
 	@include media(max-width $large-screen) {
 		padding: 0 1em;
 		text-align: center;

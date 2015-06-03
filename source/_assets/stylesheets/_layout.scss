@@ -16,14 +16,14 @@ section {
 		
 		@include omega();
 		
-		@include media(min-width $large-screen) {
-      @include position(fixed, 1em 0 0 null);
+        @include media(min-width $large-screen) {
+            @include position(fixed, 1em 0 0 null);
 			@include span-columns(5);
 			@include shift(1);
-      
+            
 			overflow: auto;
 		}
-	};
+	}
 	
 	article {
 		@include span-columns(12);
@@ -33,5 +33,5 @@ section {
 		@include media(min-width $large-screen) {
 			@include span-columns(6);
 		}
-	};
+	}
 }

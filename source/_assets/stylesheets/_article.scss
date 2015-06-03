@@ -11,21 +11,35 @@ article {
 	}
 	
 	li {
-		@include padding(3em 1em);
-		
+        @include padding(3em 1em);
+        
 		border-bottom: 1px solid $light-gray;
     
-    a {
-      color: $light-gray;
-      
-      &:hover, &:target {
-        color: $light-gray;
-      }
-    }
+        a {
+            color: $light-gray;
+            
+            &:hover, &:target {
+                color: $light-gray;
+            }
+        }
 		
 		&:hover, &:target {
 			color: $dark-gray;
 			background-color: $medium-gray;
 		}
+        
+        @include media(max-width $small-screen + 1) {
+            @include padding(1em 1em);
+            
+            text-align: center;
+        
+            .spacer, .count {
+                display: none;
+            }
+        
+            .name, .artist, .date, .title {
+                display: block;
+            }
+        }
 	}
 }
