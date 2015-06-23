@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section>
-	<nav>
+	<nav role="navigation">
 		<div class="next">
 			{% for post in site.posts %}{% if forloop.last %}
 			<a href="{{ post.url }}" title="{{ post.title }}">Next</a>
