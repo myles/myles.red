@@ -52,6 +52,13 @@ module.exports = function(grunt) {
 					build: true
 				}
 			},
+			staging: {
+				options: {
+					build: true,
+					config: '_config.yml,_config.staging.yml',
+					dest: '/Users/Myles/Sites/sites/www-myles-red/html/'
+				}
+			},
 			serve: {
 				options: {
 					serve: true,
@@ -68,7 +75,10 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('run', ['jekyll:serve']);
 	grunt.registerTask('build', ['jekyll:build']);
+	
 	grunt.registerTask('deploy', ['build', 's3:build', 'rsync:prod']);
+	grunt.registerTask('deploy:staging', ['jekyll:staging']);
+	
 	grunt.registerTask('push_podcasts', ['s3:podcasts'])
 	
 	grunt.registerTask('default', ['build']);

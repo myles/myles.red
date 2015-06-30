@@ -1,0 +1,4 @@
+environment: staging
+
+url: "http://www-myles-red.dev"
+cdn_url: "http://www-myles-red.dev"
