@@ -42,6 +42,12 @@ $ ->
 	$("h2").fitText(0.8)
 	
 	$('li[itemprop="track"]').on "click", ->
-	  GoogleAnalytics.trackPageView "#{ window.location.pathname }##{ this.id }"
-	
+        GoogleAnalytics.trackPageView "#{ window.location.pathname }##{ this.id }"
+    
+	if MylesRedPageDetails
+        for key, value in MylesRedPageDetails.tracks
+            GoogleAnalytics.trackEvent 'artist', value.artist, 'Artist'
+            return
+        return
+    
 	true

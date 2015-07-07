@@ -67,19 +67,20 @@ layout: default
 			{% capture count %}{{ count | plus: '1' }}{% endcapture %}
 			<li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording" id="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}">
 				<a name="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}">
-				<span class="count">
-					{% if count.size > 1 %}
-						{{ count }}
-					{% else %}
-						0{{ count }}
-					{% endif %}
-				</span>
-				<span class="track">
-					<span class="name" itemprop="name">{{ track.name }}</span>
-					<span class="spacer">&bull;</span>
-					<span class="artist" itemprop="byArtist">{{ track.artist }}</span>
-					{% if track.album %}<meta content="{{ track.album }}" itemprop="inAlbum">{% endif %}
-				</span>
+				    <span class="count">
+				    	{% if count.size > 1 %}
+				    		{{ count }}
+				    	{% else %}
+				    		0{{ count }}
+				    	{% endif %}
+				    </span>
+				    <span class="track">
+				    	<span class="name" itemprop="name">{{ track.name }}</span>
+				    	<span class="spacer">&bull;</span>
+				    	<span class="artist" itemprop="byArtist">{{ track.artist }}</span>
+				    	{% if track.album %}<meta content="{{ track.album }}" itemprop="inAlbum">{% endif %}
+				    </span>
+                </a>
 			</li>
 		{% endfor %}
 		</ul>
