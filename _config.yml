@@ -23,6 +23,11 @@ assets:
 # Site settings
 title: Myles.RED
 description: Some random-ass playlists made by Myles Braithwaite.
+keywords:
+  - Myles Braithwaite
+  - Mixtape
+  - Music
+  - Playlists
 permalink: /:year-:month-:day/:title.html
 
 # Author information
