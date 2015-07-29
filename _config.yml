@@ -37,8 +37,8 @@ twitter_username: mylesb
 
 # URL settings
 baseurl: ""
-url: "http://myles.red"
-cdn_url: "http://cdn.myles.red"
+url: "http://127.0.0.1:4000"
+cdn_url: "http://127.0.0.1:4000"
 
 # Build settings
 markdown: kramdown
