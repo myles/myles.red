@@ -1,14 +1,19 @@
+<meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@MylesRed">
 <meta name="twitter:creator" content="@MylesB">
+
+{% if page.title %}
+<meta property="twitter:title" content="{{ page.title }} // {{ site.title }}">
+{% else %}
+<meta property="twitter:title" content="{{ site.title }}">
+{% endif %}
+
 {% if page.tracks %}
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="{{ page.title }}">
 <meta property="twitter:description" content="Tracks: {% for track in page.tracks %}{{ track.name }}/{{ track.artist }}{% if forloop.last == false %} | {% endif %}{% endfor %}">
 {% else %}
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="{{ site.title }}">
 <meta property="twitter:description" content="{{ site.description }}">
 {% endif %}
+
 <meta property="twitter:image" content="{{ site.cdn_url }}{% asset_path favicon.png %}">
 <meta property="twitter:image:width" content="496">
 <meta property="twitter:image:height" content="496">
