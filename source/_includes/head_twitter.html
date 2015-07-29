@@ -9,7 +9,7 @@
 {% endif %}
 
 {% if page.tracks %}
-<meta property="twitter:description" content="Tracks: {% for track in page.tracks %}{{ track.name }}/{{ track.artist }}{% if forloop.last == false %} | {% endif %}{% endfor %}">
+<meta property="twitter:description" content="Tracks: {% for track in page.tracks %}{{ track.name }} - {{ track.artist }}{% if forloop.last == false %} | {% endif %}{% endfor %}">
 {% else %}
 <meta property="twitter:description" content="{{ site.description }}">
 {% endif %}
