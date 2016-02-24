@@ -19,7 +19,7 @@ layout: null
 			<itunes:email>{{ site.email | xml_escape }}</itunes:email>
 		</itunes:owner>
 		<itunes:explicit>Yes</itunes:explicit>
-		<itunes:image href="{{ site.baseurl | prepend: site.cdn_url }}{% asset_path favicon.png %}"/>
+		<itunes:image href="{{ site.baseurl | prepend: site.cdn_url }}{% asset_path podcast-icon.png %}"/>
 		<itunes:category text="{{ 'Music' | xml_escape }}"/>
 		{% for post in site.posts limit:10 %}{% if post.enclosures.mp3 %}
 			<item>
