@@ -11,11 +11,12 @@ article {
 	}
 	
 	li {
-        @include padding(3em 1em);
-        
 		border-bottom: 1px solid $light-gray;
-    
+        
         a {
+            @include padding(3em 1em);
+            display: block;
+            
             color: $light-gray;
             
             &:hover, &:target {
