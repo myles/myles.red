@@ -44,7 +44,7 @@ $ ->
 	$('li[itemprop="track"]').on "click", ->
         GoogleAnalytics.trackPageView "#{ window.location.pathname }##{ this.id }"
     
-	if MylesRedPageDetails
+	if MylesRedPageDetails.tracks
         for key, value in MylesRedPageDetails.tracks
             GoogleAnalytics.trackEvent 'artist', value.artist, 'Artist'
             return
