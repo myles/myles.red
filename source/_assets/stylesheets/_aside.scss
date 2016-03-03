@@ -11,13 +11,14 @@ aside {
 		font-size: modular-scale(4);
 		font-family: $serif-font-family;
 	}
-  
+    
+    p {
+        color: $white;
+    }
+    
     a {
-        color: $dark-gray;
-        
-        &:hover {
-          color: $medium-gray;
-        }
+        color: $light-gray;
+        text-decoration: underline;
     }
     
 	@include media(max-width $large-screen) {

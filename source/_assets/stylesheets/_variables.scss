@@ -2,9 +2,9 @@ $max-width: 100% !global;
 
 $primary-colour: rgb(255, 81, 115);
 
-$monospace-font-family: 'Source Code Pro', $monospace;
-$serif-font-family: 'Source Serif Pro', $georgia;
-$sans-serif-font-family: 'Source Sans Pro', $helvetica;
+$monospace-font-family: $monospace;
+$serif-font-family: $georgia;
+$sans-serif-font-family: $helvetica;
 
 $small-screen: em(320);
 $medium-screen: em(640);

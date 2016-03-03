@@ -1,4 +1,5 @@
 body {
-	background-color: $primary-colour;
+    background-color: $dark-gray;
+    background-image: url(image_path('background.svg'));
 	color: $light-gray;
 }
