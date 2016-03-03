@@ -4,6 +4,7 @@ article {
 	color: $light-gray;
 	background-color: $dark-gray;
 	height: 100%;
+    border-right: 1px solid $light-gray;
 	
 	ol {
 		list-style-position: inside;
