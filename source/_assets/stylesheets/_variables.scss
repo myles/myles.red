@@ -1,32 +1,36 @@
-$max-width: 100%;
-
 $primary-colour: rgb(255, 81, 115);
 $secondary-colour: #333;
-
-$body-colour: lighten($secondary-colour, 85%);
-$body-background-color: $secondary-colour;
-
-$nav-background-colour: $secondary-colour;
-$nav-link-colour: lighten($nav-background-colour, 25%);
-$nav-link-hover-colour: lighten($nav-background-colour, 50%);
-$nav-border-colour: lighten($nav-background-colour, 25%);
-
-$masthead-background-colour: $primary-colour;
-$masthead-text-colour: $secondary-colour;
-
-$playlists-border-colour: lighten($secondary-colour, 25%);
-$playlists-link-colour: lighten($secondary-colour, 50%);
-$playlists-link-background-colour: $secondary-colour;
-$playlists-link-hover-colour: $playlists-link-background-colour;
-$playlists-link-hover-background-colour: $playlists-link-colour;
 
 $monospace-font-family: "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
 $serif-font-family: "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif;
 $sans-serif-font-family: Helvetica, "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif;
 
+$body-colour: lighten($secondary-colour, 85%);
+$body-background-color: $secondary-colour;
+
 // Neat
 // ----
 $gutter: modular-scale(0, 0, $golden) !global;
 $max-width: 100% !global;
-
+$max-width: 100%;
 $small-screen: rem(800);
+
+// Components
+// ----------
+
+// Nav
+$nav-background-colour: $secondary-colour;
+$nav-link-colour: lighten($nav-background-colour, 25%);
+$nav-link-hover-colour: lighten($nav-background-colour, 50%);
+$nav-border-colour: lighten($nav-background-colour, 25%);
+
+// Masthead
+$masthead-background-colour: $primary-colour;
+$masthead-text-colour: $secondary-colour;
+
+// Playlists
+$playlists-border-colour: lighten($secondary-colour, 25%);
+$playlists-link-colour: lighten($secondary-colour, 50%);
+$playlists-link-background-colour: $secondary-colour;
+$playlists-link-hover-colour: $playlists-link-background-colour;
+$playlists-link-hover-background-colour: $playlists-link-colour;
