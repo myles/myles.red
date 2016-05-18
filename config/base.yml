@@ -1,0 +1,44 @@
+environment: dev
+
+gems:
+  - bourbon
+  - neat
+  - jekyll-sitemap
+
+# Structure configuration
+source: source
+destination: build
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  cachebust: soft
+  source:
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+  debug: true
+
+# Site settings
+title: Myles.RED
+description: Some random-ass playlists made by Myles Braithwaite.
+keywords:
+  - Myles Braithwaite
+  - Mixtape
+  - Music
+  - Playlists
+permalink: /:year-:month-:day/:title.html
+
+# Author information
+author: Myles Braithwaite
+email: me@myles.red
+twitter_username: mylesb
+
+# URL settings
+baseurl: ""
+url: "http://127.0.0.1:4000"
+cdn_url: "http://127.0.0.1:4000"
+
+# Build settings
+markdown: kramdown
