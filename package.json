@@ -1,6 +1,11 @@
 {
   "name": "red_myles_www",
   "version": "1.5.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myles/myles.red"
+  },
+  "license": "BSD-2-Clause",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-coffeelint": "0.0.15",
