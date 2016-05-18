@@ -14,7 +14,6 @@ assets:
   baseurl: /assets/
   cachebust: soft
   source:
-    - _assets/fonts
     - _assets/images
     - _assets/javascripts
     - _assets/stylesheets
