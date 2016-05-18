@@ -1,0 +1,25 @@
+---
+layout: playlist
+title: "Hi!"
+date: 2015-05-18 17:30:00
+tracks:
+  - name: "Everyday (feat. Rod Stewart x Miguel x Mark Ronson)"
+    artist: "A$AP Rocky"
+    album: "AT.LONG.LAST.A$AP"
+    file: everyday-asap-rocky.mp3
+  - name: "Water Falls"
+    artist: "Kalle Mattson"
+    album: "Lives in Between"
+    file: kalle-mattson-water-falls.mp3
+  - name: "Into the Mystic"
+    artist: "Van Morrison"
+    album: "Moondance"
+  - name: "12 Feet Deep"
+    artist: "The Front Bottoms"
+    album: "Rose"
+  - name: "Bigfoot!"
+    artist: "The Weakerthans"
+    album: "Reunion Tour"
+---
+
+Just a random playlist for Wednesday.
