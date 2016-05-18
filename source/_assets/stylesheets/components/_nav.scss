@@ -9,11 +9,11 @@
 
 .nav__item {
   @include span-columns(4);
-
-  padding-top: .25rem;
+  
   padding-bottom: .25rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: .25rem;
 
   &--left {
     text-align: left;

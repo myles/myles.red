@@ -1,6 +1,6 @@
 .block_list {
-  font-family: $monospace-font-family;
   border-right: 1px solid $playlists-border-colour;
+  font-family: $monospace-font-family;
   
   &__list {
     margin: 0;
@@ -14,15 +14,15 @@
   &__item {
     @include padding(3rem 1rem);
 
-    display: block;
-    border-bottom: 1px solid $playlists-border-colour;
-    list-style: none;
-    color: $playlists-link-colour;
     background-color: $playlists-link-background-colour;
-    
+    border-bottom: 1px solid $playlists-border-colour;
+    color: $playlists-link-colour;
+    display: block;
+    list-style: none;
+
     &:hover {
-      color: $playlists-link-hover-colour;
       background-color: $playlists-link-hover-background-colour;
+      color: $playlists-link-hover-colour;
     }
   }
 }
