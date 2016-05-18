@@ -1,39 +1,39 @@
 section {
-	@include outer-container;
+  @include outer-container;
 
-    nav {
-        @include outer-container;
-        @include margin(null null null null);
-        @include position(fixed, 0 0 null 0);
-        
-        div {
-            @include span-columns(4);
-        }
+  nav {
+    @include outer-container;
+    @include margin(null null null null);
+    @include position(fixed, 0 0 null 0);
+
+    div {
+      @include span-columns(4);
     }
+  }
 
-	aside {
-		@include span-columns(12);
+  aside {
+    @include span-columns(12);
 
-		@include omega();
+    @include omega();
 
-        @include media(min-width $large-screen) {
-            @include position(fixed, 1em 0 0 null);
-			@include span-columns(5);
-			@include shift(1);
+    @include media(min-width $large-screen) {
+      @include position(fixed, 1em 0 0 null);
+      @include span-columns(5);
+      @include shift(1);
 
-			overflow: auto;
-		}
-	}
+      overflow: auto;
+    }
+  }
 
-	article {
-		@include span-columns(12);
+  article {
+    @include span-columns(12);
 
-		@include omega();
+    @include omega();
 
-		@include media(min-width $large-screen) {
-			@include span-columns(6);
-            
-            width: 50%;
-		}
-	}
+    @include media(min-width $large-screen) {
+      @include span-columns(6);
+
+      width: 50%;
+    }
+  }
 }

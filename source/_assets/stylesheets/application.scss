@@ -1,15 +1,15 @@
-@import "vendor/normalize";
+@import 'vendor/normalize';
 
-@import "bourbon";
-@import "neat";
-@import "base/base";
+@import 'bourbon';
+@import 'neat';
+@import 'base/base';
 
-@import "variables";
+@import 'variables';
 
-@import "global";
+@import 'global';
 
-@import "layout";
+@import 'layout';
 
-@import "article";
-@import "aside";
-@import "nav";
+@import 'article';
+@import 'aside';
+@import 'nav';

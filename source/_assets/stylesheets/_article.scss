@@ -1,47 +1,54 @@
 article {
-	font-size: modular-scale(1);
-	font-family: $monospace-font-family;
-	color: $light-gray;
-	background-color: $dark-gray;
-	height: 100%;
-    border-right: 1px solid $light-gray;
-	
-	ol {
-		list-style-position: inside;
-		list-style-type: decimal-leading-zero;
-	}
-	
-	li {
-		border-bottom: 1px solid $light-gray;
-        
-        a {
-            @include padding(3em 1em);
-            display: block;
-            
-            color: $light-gray;
-            
-            &:hover, &:target {
-                color: $light-gray;
-            }
-        }
-		
-		&:hover, &:target {
-			color: $dark-gray;
-			background-color: $medium-gray;
+  background-color: $dark-gray;
+  border-right: 1px solid $light-gray;
+  color: $light-gray;
+  font-family: $monospace-font-family;
+  font-size: modular-scale(1);
+
+  ol {
+    list-style-position: inside;
+    list-style-type: decimal-leading-zero;
+  }
+
+  li {
+    border-bottom: 1px solid $light-gray;
+
+    a {
+      @include padding(3em 1em);
+
+      color: $light-gray;
+      display: block;
+
+      &:hover,
+      &:target {
+        color: $light-gray;
+      }
+    }
+
+    &:hover,
+    &:target {
+      background-color: $medium-gray;
+      color: $dark-gray;
 		}
-        
-        @include media(max-width $small-screen + 1) {
-            @include padding(1em 1em);
-            
-            text-align: center;
-        
-            .spacer, .count {
-                display: none;
-            }
-        
-            .name, .artist, .date, .title {
-                display: block;
-            }
-        }
 	}
+}
+
+@include media(max-width $small-screen + 1) {
+  article li {
+    @include padding(1em 1em);
+
+    text-align: center;
+
+    .spacer,
+    .count {
+      display: none;
+    }
+
+    .name,
+    .artist,
+    .date,
+    .title {
+      display: block;
+    }
+  }
 }

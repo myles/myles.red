@@ -1,31 +1,33 @@
 aside {
-	h1 {
-        font-weight: bolder;
-		font-size: modular-scale(5);
-		font-family: $serif-font-family;
-		margin: 1em 0 0 0;
-	}
-
-	h2 {
+  h1 {
+    font-family: $serif-font-family;
+    font-size: modular-scale(5);
     font-weight: bolder;
-		font-size: modular-scale(4);
-		font-family: $serif-font-family;
-	}
-    
-    p {
-        color: $light-gray;
-    }
-    
-    a {
-        color: $light-gray;
-        text-decoration: underline;
-    }
-    
-	@include media(max-width $large-screen) {
-		padding: 0 1em;
-		text-align: center;
-		
-		h1 { font-size: modular-scale(3); }
-		h2 { font-size: modular-scale(2); }
-	}
+    margin: 1em 0 0;
+  }
+
+  h2 {
+    font-family: $serif-font-family;
+    font-size: modular-scale(4);
+    font-weight: bolder;
+  }
+
+  p {
+    color: $light-gray;
+  }
+
+  a {
+    color: $light-gray;
+    text-decoration: underline;
+  }
+}
+
+@include media(max-width $large-screen) {
+  aside {
+    padding: 0 1em;
+    text-align: center;
+
+    h1 { font-size: modular-scale(3); }
+    h2 { font-size: modular-scale(2); }
+  }
 }
