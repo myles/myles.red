@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     var config = {
         options: {
             bundleExec: true,
-            config: '_config.yml'
+            config: 'config/base.yml'
         },
         build: {
             options: {
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
             options: {
                 build: true,
                 debug: false,
-                config: '_config.yml,_config.production.yml'
+                config: 'config/base.yml,config/prod.yml'
             }
         }
     };

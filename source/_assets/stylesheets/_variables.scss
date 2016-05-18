@@ -10,7 +10,7 @@ $body-background-color: $secondary-colour;
 
 // Neat
 // ----
-$gutter: modular-scale(0, 0, $golden) !global;
+$gutter: modular-scale(0, 0em, $golden) !global;
 $max-width: 100% !global;
 $max-width: 100%;
 $small-screen: rem(800);
