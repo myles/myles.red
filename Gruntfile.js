@@ -8,6 +8,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-rsync');
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-favicons');
+    grunt.loadNpmTasks('grunt-scss-lint');
+    grunt.loadNpmTasks('grunt-coffeelint');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.task.loadTasks('./tasks/');

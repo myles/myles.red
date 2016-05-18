@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (grunt) {
-    grunt.registerTask('run', [ 'jekyll:serve' ]);
+    grunt.registerTask('develop', [ 'jekyll:serve' ]);
 
     grunt.registerTask('build', [ 'jekyll:build' ]);
 
@@ -12,5 +12,10 @@ module.exports = function (grunt) {
         'rsync:production'
     ]);
 
-    grunt.registerTask('default', [ 'run' ]);
+    grunt.registerTask('test', [
+        'scsslint',
+        'coffeelint'
+    ]);
+
+    grunt.registerTask('default', [ 'develop' ]);
 };
