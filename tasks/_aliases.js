@@ -10,6 +10,7 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', [
     'clean',
     'jekyll:production',
+    'favicons',
     'rsync:production',
     's3:build'
   ]);
