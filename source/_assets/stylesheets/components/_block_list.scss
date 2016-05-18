@@ -1,0 +1,28 @@
+.block_list {
+  font-family: $monospace-font-family;
+  border-right: 1px solid $playlists-border-colour;
+  
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__link {
+    text-decoration: none;
+  }
+  
+  &__item {
+    @include padding(3rem 1rem);
+
+    display: block;
+    border-bottom: 1px solid $playlists-border-colour;
+    list-style: none;
+    color: $playlists-link-colour;
+    background-color: $playlists-link-background-colour;
+    
+    &:hover {
+      color: $playlists-link-hover-colour;
+      background-color: $playlists-link-hover-background-colour;
+    }
+  }
+}

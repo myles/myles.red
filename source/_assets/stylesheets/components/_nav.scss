@@ -1,0 +1,44 @@
+.nav {
+  @include outer-container;
+
+  background-color: $nav-background-colour;
+  border-bottom: 1px solid $nav-border-colour;
+  font-family: $monospace-font-family;
+  height: 2rem;
+}
+
+.nav__item {
+  @include span-columns(4);
+
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
+.nav__link {
+  color: $nav-link-colour;
+  text-decoration: none;
+
+  &:hover {
+    color: $nav-link-hover-colour;
+  }
+}
+
+@include media($small-screen-up) {
+  .nav {
+    @include position(fixed, 0 0 null 0);
+  }
+}

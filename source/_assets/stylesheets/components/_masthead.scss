@@ -1,0 +1,32 @@
+.masthead {
+  @include align-items(center);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(center);
+
+  background-color: $masthead-background-colour;
+
+  &__inner {
+    @include flex(1);
+    @include padding(1rem);
+  }
+
+  &__heading,
+  &__subtitle,
+  &__content {
+    color: $masthead-text-colour;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+@include media($small-screen-up) {
+  .masthead {
+    @include position(fixed, 2rem 0 0 null);
+
+    height: 100vh;
+    overflow: auto;
+  }
+}

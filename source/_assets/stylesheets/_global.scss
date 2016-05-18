@@ -1,9 +1,6 @@
 body {
-  background-color: $dark-gray;
-  background-image: url(image_path('background.svg'));
-  color: $light-gray;
-
-  @include media(min-width $large-screen) {
-    background-size: cover;
-  }
+  background-color: $body-background-color;
+  color: $body-colour;
+  margin: 0;
+  margin-top: 2rem;
 }

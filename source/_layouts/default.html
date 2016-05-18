@@ -4,37 +4,37 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        
+
         <meta name="description" content="{{ site.description }}">
         <meta name="keywords" contnet="{% for keyword in site.keywords %}{{ keyword }}, {% endfor %}">
-        
+
         <title>{% if page.title %}{{ page.title }} // {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-        
+
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-        
+
         <link rel="onion" href="http://yyow3cunulutqezw.onion/">
-        
-        <link rel="stylesheet" href="{{ site.baseurl }}{% asset_path application.css %}">
-        
+
+        <link rel="stylesheet" href="{{ site.baseurl }}{% asset_path style.css %}">
+
         {% include favicons.html %}
         {% include head_facebook.html %}
         {% include head_twitter.html %}
         {% include head_windows.html %}
-        
+
         <link rel="alternate" type="application/atom+xml" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" title="Myles.RED Feed">
     </head>
     <body>
-        {% include header.html %}
         {{ content }}
-        {% include footer.html %}
+
         <script type="text/javascript">
-            window.MylesRedPageDetails = {
-                {% if page.title %}title: {{ page.title | jsonify }},{% endif %}
-                {% if page.date %}date: {{ page.date | jsonify }},{% endif %}
-                {% if page.tracks %}tracks: {{ page.tracks | jsonify }},{% endif %}
-                url: "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
-            }
+        window.MylesRedPageDetails = {
+            {% if page.title %}title: {{ page.title | jsonify }},{% endif %}
+            {% if page.date %}date: {{ page.date | jsonify }},{% endif %}
+            {% if page.tracks %}tracks: {{ page.tracks | jsonify }},{% endif %}
+            url: "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+        }
         </script>
+
         <script type="text/javascript" src="{{ site.baseurl }}{% asset_path application.js %}"></script>
     </body>
 </html>

@@ -5,8 +5,6 @@ module.exports = function (grunt) {
         config: grunt.file.readYAML('config/base.yml')
     });
 
-    grunt.loadNpmTasks('grunt-aws');
-    grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-rsync');
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-favicons');

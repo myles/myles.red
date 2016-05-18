@@ -1,15 +1,32 @@
-$max-width: 100% !global;
+$max-width: 100%;
 
 $primary-colour: rgb(255, 81, 115);
+$secondary-colour: #333;
 
-$monospace-font-family: $monospace;
-$serif-font-family: $georgia;
-$sans-serif-font-family: $helvetica;
+$body-colour: lighten($secondary-colour, 85%);
+$body-background-color: $secondary-colour;
 
-$small-screen: em(320);
-$medium-screen: em(640);
-$large-screen: em(860);
+$nav-background-colour: $secondary-colour;
+$nav-link-colour: lighten($nav-background-colour, 25%);
+$nav-link-hover-colour: lighten($nav-background-colour, 50%);;
+$nav-border-colour: lighten($nav-background-colour, 25%);
 
-$small-screen-up: new-breakpoint(min-width $small-screen 2);
-$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
-$large-screen-up: new-breakpoint(min-width $large-screen 8);
+$masthead-background-colour: $primary-colour;
+$masthead-text-colour: $secondary-colour;
+
+$playlists-border-colour: lighten($secondary-colour, 25%);
+$playlists-link-colour: lighten($secondary-colour, 50%);
+$playlists-link-background-colour: $secondary-colour;
+$playlists-link-hover-colour: $playlists-link-background-colour;
+$playlists-link-hover-background-colour: $playlists-link-colour;
+
+$monospace-font-family: "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+$serif-font-family: "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif;
+$sans-serif-font-family: Helvetica, "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif;
+
+// Neat
+// ----
+$gutter: modular-scale(0, 0em, $golden) !global;
+$max-width: 100% !global;
+
+$small-screen: rem(800);

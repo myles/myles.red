@@ -2,9 +2,10 @@
   "name": "red_myles_www",
   "version": "1.5.0",
   "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-favicons": "^0.7.0",
     "grunt-jekyll": "^0.4.2",
-    "grunt-rsync": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0"
+    "grunt-rsync": "^1.0.1"
   }
 }

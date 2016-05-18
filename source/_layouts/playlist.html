@@ -2,87 +2,97 @@
 layout: default
 ---
 
-<section itemscope itemtype="http://schema.org/Article">
-	<nav role="navigation">
-		<div class="next">
+<div class="container">
+    <div class="nav">
+        <div class="nav__item nav__item--left">
 			{% if page.next %}
-			<a href="{{ page.next.url }}" title="{{ page.next.title }}">Next</a>
+			<a href="{{ page.next.url }}" title="{{ page.next.title }}" class="nav__link">Next</a>
 			{% else %}
-			<a href="{{ "/" | site.base.url }}" title="Home">Next</a>
+			<a href="{{ "/" | site.base.url }}" title="Home" class="nav__link">Next</a>
 			{% endif %}
-		</div>
-	
-		<div class="home">
-			<a href="{{ "/" | site.base.url }}" title="Home">Home</a>
-		</div>
-	
-		<div class="previous">
+        </div>
+        
+        <div class="nav__item nav__item--center">
+            <a href="{{ "/" | site.base.url }}" title="Home" class="nav__link">Home</a>
+        </div>
+        
+        <div class="nav__item nav__item--right">
 			{% if page.previous %}
-			<a href="{{ page.previous.url }}" title="{{ page.previous.title }}">Prev</a>
+			<a href="{{ page.previous.url }}" title="{{ page.previous.title }}" class="nav__link">Prev</a>
 			{% else %}
-			<a href="{{ "/" | site.base.url }}" title="Home">Prev</a>
+			<a href="{{ "/" | site.base.url }}" title="Home" class="nav__link">Prev</a>
 			{% endif %}
-		</div>
-	</nav>
-	
-	<aside>
-		<h1 itemprop="name">{{ page.title | improve }}</h1>
-		<h2  itemprop="datePublished">{{ page.date | date_to_string | improve }}</h2>
+        </div>
+    </div>
+    
+    <div class="grid">
+        <div class="grid__cell grid__cell--omega masthead">
+            <div class="masthead__inner">
+        		<h1 class="masthead__heading">{{ page.title | improve }}</h1>
+        		<h2 class="masthead__subtitle">{{ page.date | date_to_string | improve }}</h2>
+                
+                <div class="masthead__content">
+            		{% if page.enclosures %}
+            		<audio controls>
+            			{% if page.enclosures.mp3 %}
+            			<source src="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}" type="audio/mpeg">
+            			{% endif %}
+            			{% if page.enclosures.m4a %}
+            			<source src="{{ page.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" type="audio/mp4a-latm">
+            			{% endif %}
+            		</audio>
+            		{% endif %}
 		
-		{% if page.enclosures %}
-		<audio controls>
-			{% if page.enclosures.mp3 %}
-			<source src="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}" type="audio/mpeg">
-			{% endif %}
-			{% if page.enclosures.m4a %}
-			<source src="{{ page.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" type="audio/mp4a-latm">
-			{% endif %}
-		</audio>
-		{% endif %}
+            		{% if page.external_links or page.enclosures %}
+            		<p>
+            			{% if page.external_links.rdio %}
+            			<a href="{{ page.external_links.rdio }}">Rdio</a>
+            			{% endif %}
+            			{% if page.external_links.spotify %}
+            			<a href="{{ page.external_links.spotify }}">Spotify</a>
+            			{% endif %}
+            			{% if page.enclosures.mp3 %}
+            			<a href="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}" download>Download MP3</a>
+            			{% endif %}
+            			{% if page.enclosures.m4a %}
+            			<a href="{{ page.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" download>Download M4A</a>
+            			{% endif %}
+            		</p>
+            		{% endif %}
 		
-		{% if page.external_links or page.enclosures %}
-		<p>
-			{% if page.external_links.rdio %}
-			<a href="{{ page.external_links.rdio }}">Rdio</a>
-			{% endif %}
-			{% if page.external_links.spotify %}
-			<a href="{{ page.external_links.spotify }}">Spotify</a>
-			{% endif %}
-			{% if page.enclosures.mp3 %}
-			<a href="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}" download>Download MP3</a>
-			{% endif %}
-			{% if page.enclosures.m4a %}
-			<a href="{{ page.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" download>Download M4A</a>
-			{% endif %}
-		</p>
-		{% endif %}
-		
-		{{ content }}
-	</aside>
-	
-	<article itemscope itemtype="http://schema.org/MusicPlaylist">
-		{% assign count = '0' %}
-		<ul>
-		{% for track in page.tracks %}
-			{% capture count %}{{ count | plus: '1' }}{% endcapture %}
-			<li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording" id="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}">
-				<a name="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}">
-				    <span class="count">
-				    	{% if count.size > 1 %}
-				    		{{ count }}
-				    	{% else %}
-				    		0{{ count }}
-				    	{% endif %}
-				    </span>
-				    <span class="track">
-				    	<span class="name" itemprop="name">{{ track.name }}</span>
-				    	<span class="spacer">&bull;</span>
-				    	<span class="artist" itemprop="byArtist">{{ track.artist }}</span>
-				    	{% if track.album %}<meta content="{{ track.album }}" itemprop="inAlbum">{% endif %}
-				    </span>
+            		{{ content }}
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid_cell block_list playlist">
+            <ul class="block_list__list playlist__tracks">
+                {% assign count = '0' %}
+                {% for track in page.tracks %}
+                {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+                <a name="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" id="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" class="block_list__link">
+                    <li class="block_list__item playlist__track">
+                        <span class="playlist__track_number">
+    				    	{% if count.size > 1 %}
+    				    		{{ count }}
+    				    	{% else %}
+    				    		0{{ count }}
+    				    	{% endif %}
+                        </span>
+                        
+                        <span class="playlist__track_name">
+                            {{ track.name }}
+                        </span>
+                        
+                        <span class="playlist__track_spacer">&bull;</span>
+                        
+                        <span class="playlist__track_artist">
+                            {{ track.artist }}
+                        </span>
+                    </li>
                 </a>
-			</li>
-		{% endfor %}
-		</ul>
-	</article>
-</section>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

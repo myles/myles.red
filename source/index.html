@@ -2,48 +2,55 @@
 layout: default
 ---
 
-<section>
-	<nav role="navigation">
-		<div class="next">
+<div class="container">
+    <div class="nav">
+        <div class="nav__item nav__item--left">
 			{% for post in site.posts %}{% if forloop.last %}
-			<a href="{{ post.url }}" title="{{ post.title }}">Next</a>
+			<a href="{{ post.url }}" title="{{ post.title }}" class="nav__link">Next</a>
 			{% endif %}{% endfor %}
-		</div>
-
-		<div class="home">
-			<a href="{{ "/" | site.base.url }}" title="Home">Home</a>
-		</div>
-
-		<div class="previous">
+        </div>
+        
+        <div class="nav__item nav__item--center">
+            <a href="{{ "/" | site.base.url }}" title="Home" class="nav__link">Home</a>
+        </div>
+        
+        <div class="nav__item nav__item--right">
 			{% for post in site.posts %}{% if forloop.first %}
-			<a href="{{ post.url }}" title="{{ post.title }}">Prev</a>
+			<a href="{{ post.url }}" title="{{ post.title }}" class="nav__link">Prev</a>
 			{% endif %}{% endfor %}
-		</div>
-	</nav>
-
-	<aside>
-		<h1>{{ site.title | improve }}</h1>
-		<h2>{{ site.time | date_to_long_string | improve }}</h2>
-		<p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">{{ "via RSS" | improve }}</a>.</p>
-	</aside>
-
-	<article>
-		<ul>
-		{% for post in site.posts %}
-			<li>
-				<a href="{{ post.url | prepend: site.baseurl }}">
-					<span class="date">
-						{{ post.date | date: "%-d %B, %Y" | improve }}
-					</span>
-
-					<span class="spacer">&bull;</span>
-
-					<span class="title">
-						{{ post.title | improve }}
-					</span>
-				</a>
-			</li>
-		{% endfor %}
-		</ul>
-	</article>
-</section>
+        </div>
+    </div>
+    
+    <div class="gird">
+        <div class="grid__cell grid__cell--omega masthead">
+            <div class="masthead__inner">
+                <h1 class="masthead__heading">{{ site.title | improve }}</h1>
+                <h2 class="masthead__subtitle">{{ site.time | date_to_long_string | improve}}</h2>
+            
+                <div class="masthead__content">
+                    <p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">{{ "via RSS" | improve }}</a>.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid__cell block_list">
+            <ul class="block_list__list">
+                {% for post in site.posts %}
+                <a href="{{ post.url | prepend: site.baseurl }}" class="block_list__link">
+                    <li class="block_list__item">
+                        <span class="block_list__date">
+                            {{ post.date | date: "%-d %B, %Y" | improve }}
+                        </span>
+                        
+                        <span class="block_list__spacer">&bull;</span>
+                        
+                        <span class="block_list__title">
+                            {{ post.title | improve }}
+                        </span>
+                    </li>
+                </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

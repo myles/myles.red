@@ -1,0 +1,15 @@
+$small-screen-up: new-breakpoint(min-width $small-screen);
+
+@include media($small-screen-up) {
+  .gird {
+    @include outer-container;
+  }
+
+  .grid__cell {
+    @include span-columns(6);
+  }
+  
+  .grid--omega {
+    @include omega();
+  }
+}
