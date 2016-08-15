@@ -1,9 +1,9 @@
 $primary-colour: rgb(255, 81, 115);
 $secondary-colour: #333;
 
-$monospace-font-family: "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
-$serif-font-family: "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif;
-$sans-serif-font-family: Helvetica, "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif;
+$monospace-font-family: "Source Code Pro", "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+$serif-font-family: "Alfa Slab One", "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif;
+$sans-serif-font-family: "Open Sans", "Fira Sans", Helvetica, "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif;
 
 $body-colour: lighten($secondary-colour, 85%);
 $body-background-color: $secondary-colour;

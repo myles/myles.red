@@ -80,7 +80,7 @@ layout: default
                 {% assign count = '0' %}
                 {% for track in page.tracks %}
                 {% capture count %}{{ count | plus: '1' }}{% endcapture %}
-                <a name="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" id="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" class="block_list__link"{% if track.spotify %} data-spotify-track-id="{{ track.spotify }}"{% endif %}>
+                <a name="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" id="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" class="block_list__link" data-track-number="{{ count }}" data-track-name="{{ track.name }}" data-track-artist="{{ track.artist }}"{% if track.album %} data-track-album="{{ track.album }}"{% endif %}{% if track.spotify %} data-spotify-track-id="{{ track.spotify }}"{% endif %}>
                     <li class="block_list__item playlist__track">
                         <span class="playlist__track_number">{% if count.size > 1 %}{{ count }}{% else %}0{{ count }}{% endif %}</span>
                         
