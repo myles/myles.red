@@ -3,6 +3,7 @@ layout: playlist
 title: "HackLab.TO One"
 date: 2016-08-11 17:30:00
 spotify_playlist: 5uwMyyh0vqy1ifH63fiqEX
+shorturl: https://myl.be/cc
 tracks:
   - name: "Chill Bill (feat. J. Davi$ & Spooks)"
     artist: "Rob $Tone"

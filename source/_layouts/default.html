@@ -12,6 +12,10 @@
         
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
         
+        {% if page.shorturl %}
+        <link rel="shortlink" type="text/html" href="{{ page.shorturl }}">
+        {% endif %}
+        
         <link rel="onion" href="http://yyow3cunulutqezw.onion/">
         
         <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Source+Code+Pro" rel="stylesheet">
