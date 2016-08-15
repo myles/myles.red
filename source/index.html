@@ -24,8 +24,8 @@ layout: default
     <div class="gird">
         <div class="grid__cell grid__cell--omega masthead">
             <div class="masthead__inner">
-                <h1 class="masthead__heading">{{ site.title | improve }}</h1>
-                <h2 class="masthead__subtitle">{{ site.time | date_to_long_string | improve}}</h2>
+                <h1 class="masthead__heading js__fit-text">{{ site.title | improve }}</h1>
+                <h2 class="masthead__subtitle js__fit-text">{{ site.time | date_to_long_string | improve}}</h2>
             
                 <div class="masthead__content">
                     <p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">{{ "via RSS" | improve }}</a>.</p>

@@ -7,10 +7,13 @@
             <span class="name" itemprop="name">
                 {{ track.name }}
             </span>
+            
             <span class="spacer">&bull;</span>
+            
             <span class="artist" itemprop="byArtist">
                 {{ track.artist }}
             </span>
+            
             {% if track.album %}<meta content="{{ track.album }}" itemprop="inAlbum">{% endif %}
         </span>
     </li>

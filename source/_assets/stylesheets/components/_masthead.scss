@@ -20,6 +20,16 @@
     margin-top: 0;
     text-align: center;
   }
+  
+  &__content {
+    a {
+      color: darken($masthead-text-colour, 85%);
+      
+      &:hover {
+        color: $masthead-text-colour;
+      }
+    }
+  }
 }
 
 @include media($small-screen-up) {
