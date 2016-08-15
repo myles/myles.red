@@ -41,3 +41,6 @@ cdn_url: "http://127.0.0.1:4000"
 
 # Build settings
 markdown: kramdown
+
+# Spotify
+spotify_username: mylesab

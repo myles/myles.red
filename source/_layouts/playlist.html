@@ -32,37 +32,43 @@ layout: default
                 <h2 class="masthead__subtitle js__fit-text">{{ page.date | date_to_string | improve }}</h2>
                 
                 <div class="masthead__content">
-                {% if page.enclosures %}
-                    <audio controls>
-                    {% if page.enclosures.mp3 %}
-                        <source src="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}" type="audio/mpeg">
+                    {% if page.enclosures %}
+                    <div class="masthead__enclosures">
+                        <audio controls>
+                        {% if page.enclosures.mp3 %}
+                            <source src="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}" type="audio/mpeg">
+                        {% endif %}
+                    
+                        {% if page.enclosures.m4a %}
+                            <source src="{{ page.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" type="audio/mp4a-latm">
+                        {% endif %}
+                        </audio>
+                    </div>
                     {% endif %}
                     
-                    {% if page.enclosures.m4a %}
-                        <source src="{{ page.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" type="audio/mp4a-latm">
-                    {% endif %}
-                    </audio>
-                {% endif %}
-                
-                {% if page.external_links or page.enclosures %}
-                    <p>
-                    {% if page.external_links.rdio %}
-                        <a href="{{ page.external_links.rdio }}">Rdio</a>
-                    {% endif %}
-                    
-                    {% if page.external_links.spotify %}
-                        <a href="{{ page.external_links.spotify }}">Spotify</a>
-                    {% endif %}
-                    
-                    {% if page.enclosures.mp3 %}
-                        <a href="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}" download>Download MP3</a>
+                    {% if page.spotify_playlist or page.external_links or page.enclosures %}
+                    <div class="masthead__external-links">
+                        <p>
+                        {% if page.spotify_playlist %}
+                            <a href="https://play.spotify.com/user/{{ site.spotify_username }}/playlist/{{ page.spotify_playlist }}">Spotify</a>
+                        {% endif %}
+                        
+                        {% if page.enclosures.mp3 %}
+                            <a href="{{ page.enclosures.mp3 | prepend: "/podcasts/" | prepend: site.cdn_url }}" download>Download MP3</a>
+                        {% endif %}
+                        
+                        {% if page.enclosures.m4a %}
+                            <a href="{{ page.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" download>Download M4A</a>
+                        {% endif %}
+                        </p>
+                    </div>
                     {% endif %}
                     
-                    {% if page.enclosures.m4a %}
-                        <a href="{{ page.enclosures.m4a | prepend: "/podcasts/" | prepend: site.cdn_url }}" download>Download M4A</a>
+                    {% if page.spotify_playlist %}
+                    <div class="masthead__spotify-play-button">
+                        <iframe src="https://embed.spotify.com/?uri=spotify:user:{{ site.spotify_username }}:playlist:{{ page.spotify_playlist }}&theme=white" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+                    </div>
                     {% endif %}
-                    </p>
-                {% endif %}
                     
                     {{ content }}
                 </div>
@@ -74,7 +80,7 @@ layout: default
                 {% assign count = '0' %}
                 {% for track in page.tracks %}
                 {% capture count %}{{ count | plus: '1' }}{% endcapture %}
-                <a name="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" id="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" class="block_list__link">
+                <a name="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" id="{{ count }}_{{ track.name | slugify }}_{{ track.artist | slugify }}" class="block_list__link"{% if track.spotify %} data-spotify-track-id="{{ track.spotify }}"{% endif %}>
                     <li class="block_list__item playlist__track">
                         <span class="playlist__track_number">{% if count.size > 1 %}{{ count }}{% else %}0{{ count }}{% endif %}</span>
                         

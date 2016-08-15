@@ -1,20 +1,27 @@
 ---
 layout: playlist
-title: "HackLab.TO I"
+title: "HackLab.TO One"
 date: 2016-08-11 17:30:00
+spotify_playlist: 5uwMyyh0vqy1ifH63fiqEX
 tracks:
   - name: "Chill Bill (feat. J. Davi$ & Spooks)"
     artist: "Rob $Tone"
+    spotify: 1vwfTlvvMZ801NQjA3WXgM
   - name: "Strange Habit"
     artist: "July Talk"
+    spotify: 16n4P4eX4nKH8mrsGerawL
     album: "Touch"
   - name: "Drake's Dad"
     artist: "Arkells"
     album: "Morning Report"
+    spotify: 79xLbw1VnBcHPhUNVKaGUP
   - name: "You Don't Own Me (feat. G-Eazy)"
     artist: "Grace"
+    spotify: 2CpH1L4CUR47RARB3PgY1l
   - name: "Life on Mars"
     artist: "AURORA"
+    spotify: 6tdixrrHbOHQfdamvcyOes
   - name: "Chicago"
     artist: "Sufjan Stevens"
+    spotify: 3KEKijpvo4FP7AdQYmb22O
 ---
